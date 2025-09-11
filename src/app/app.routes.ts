@@ -26,13 +26,13 @@ import { FrequentquestionComponent } from './frequentquestion/frequentquestion.c
 import { AnnouncementComponent } from './homepage/announcement/announcement.component';
 import { IMComponent } from './lab/inovative_manufacturing/IM.component';
 // import { ARComponent } from './lab/AR_VR_MR_Research_Centre/AR.component';
-// import { PEComponent } from './lab/Predictive_Engineering/PE.component';
+import { PEComponent } from './lab/Predictive_Engineering/PE.component';
 import { SFCComponent } from './lab/Smart_Factory_Center/SFC.component';
 import { PLMComponent } from './lab/Research_Centre_For_PLM/PLM.component';
 import { RCFAPComponent } from './lab/Research_Centre_For_Asset_Performance/RCFAP.component';
 import { ARVRComponent } from './lab/ar_vr/arvr';
 import { DeepDriveComponent } from './deep-drive/deep-drive';
-// import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
+import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
 
 
 
@@ -69,13 +69,13 @@ export const routes: Routes = [
   { path: 'announcement', component: AnnouncementComponent },
   { path: 'lab/Innovative_Manufacturing', component: IMComponent },
   {path:'lab/ar_vr',component:ARVRComponent},
-  // { path: 'labs/AR_VR_MR_Research_Centre', component: ARComponent },
-  // { path: 'labs/Predictive_Engineering', component: PEComponent },
+  // { path: 'lab/AR_VR_MR_Research_Centre', component: ARComponent },
+  { path: 'lab/Predictive_Engineering', component: PEComponent },
   { path: 'lab/Smart_Factory_Center', component: SFCComponent },
   { path: 'lab/Research_Centre_For_PLM', component: PLMComponent },
   { path: 'lab/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
-  {path:'deep-drive',component:DeepDriveComponent}
-  // { path: 'labs/Product_Innovation_Center', component: PICComponent },
+  {path:'deep-drive',component:DeepDriveComponent},
+  { path: 'lab/Product_Innovation_Center', component: PICComponent },
 
 
 
