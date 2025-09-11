@@ -80,12 +80,11 @@ section.highlight-section {
 
 .entrepreneurship-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically (if needed) */
   padding: 40px 20px;
-  /* background: linear-gradient(180deg, #e9f7fd 0%, #ffffff 100%); */
   border-radius: 16px;
   width: 100%;
-  /* max-width: 1200px; */
   margin: 40px auto;
   font-family: 'Inter', sans-serif;
   animation: fadeIn 1.2s ease-in-out;
@@ -95,7 +94,10 @@ section.highlight-section {
 .entrepreneurship-content {
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;          /* Ensures it’s centered inside wrapper */
+  text-align: center;      /* Optional: makes headings & text center-aligned */
 }
+
 
 .entrepreneurship-content p {
   font-size: 1.125rem;
