@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-/* body{
+body{
   padding-top: 60px;
   margin: 0;
-} */
+}
 /* Ensures the header elements (social media, notification, buttons) are in a single row */
 
 /* Common container to align with logo section */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 47px; /* Matches logo section's 10px 99px */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,12 +18,13 @@
 .topline {
   background-color: #009999;
   width: 100%;
+  padding: 5px;
 }
 
 /* Social Media Icons */
 .socialmedia {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -231,8 +229,6 @@
   margin-right: 10px;
   background: #009999;
   border-radius: 8px;
-
-
 }
 
 .topright a {
@@ -259,7 +255,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 99px;
+  padding: 10px 590px;
   background-color: white;
   gap: 20px;
   flex-wrap: nowrap; /* no wrapping */
@@ -280,10 +276,9 @@
   object-fit: contain;
 }
 
-/* Specifically limit Siemens logo to match others */
 /* Specifically limit Siemens logo now on left */
 .logo-left img[alt="Siemens Logo"] {
-  height: 24px;
+  height: 20px;
   object-fit: contain;
 }
 
@@ -296,7 +291,7 @@
 
 /* Main title */
 .header-title .main-title {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   color: #00569A;
   margin: 0;
@@ -306,7 +301,7 @@
 
 /* Subtitle below main title */
 .subtitle {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: #00569A;
   margin-top: 4px;
@@ -362,15 +357,33 @@
   cursor: pointer;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -46px;
   transition: transform 0.3s ease-in-out;
-  border: 1px solid #ddd;
+  border: 1px solid #00579a36;
 
 }
 
-/* .navbar.sticky {
+.navbar.sticky {
   background: rgba(0, 153, 153, 0.9);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 10px 0;
-} */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff; /* change background if needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 
 .nav-list {
   list-style: none;
@@ -1035,4 +1048,19 @@
 }
 .dropdown-menu li.no-arrow::after {
   content: none;
+}
+
+.sticky-header {
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.sticky-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff; /* optional solid background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
