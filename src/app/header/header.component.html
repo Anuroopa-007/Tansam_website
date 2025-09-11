@@ -61,14 +61,14 @@
       </div>
 
       <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
-        <li class="active" ><a href="#">Home</a></li>
+        <li class="active" ><a href="#" (click)="closeMenu()">Home</a></li>
         <li class="active">
-          <a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a>
+          <a [routerLink]="['/aboutus']" routerLinkActive="active" (click)="closeMenu()" >About Us</a>
         </li>
 
 
       <li class="labs-dropdown">
-        <span class="menu-label">
+        <span class="menu-label" (click)="closeMenu()">
           Our Research Labs
           <i class="fa-solid fa-chevron-down"></i>
         </span>
@@ -89,7 +89,7 @@
           [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }"
           (click)="toggleDropdown('naanmudhalvan')"
         >
-          <span class="active">
+          <span class="active" (click)="closeMenu()">
             Skilling Programs
             <i
               class="fa-solid"
@@ -139,8 +139,8 @@
           </ul>
         </li>
 
-        <li class="active"><a [routerLink]="['Brochure']">Digital Transformation</a></li>
-        <li class="active"><a [routerLink]="">Latest News</a></li>
+        <li class="active"><a [routerLink]="['Brochure']" (click)="closeMenu()">Digital Transformation</a></li>
+        <li class="active"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li>
       </ul>
     </nav>
 </div>

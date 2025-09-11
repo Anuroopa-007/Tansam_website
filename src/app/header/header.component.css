@@ -540,15 +540,17 @@ body{
 
 
 /* HAMBURGER MENU (FOR MOBILE) */
+/* Default (hide on desktop) */
 .hamburger {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   background: none;
   border: none;
-  color: white;
+  color: #009999; /* ✅ change to visible teal */
+  z-index: 2001;  /* above menu */
+  position: relative;
 }
-
 /* Overlay */
 /* Full-Screen Dull Overlay */
 .dull-overlay {
@@ -1063,4 +1065,22 @@ body{
   left: 0;
   background: #fff; /* optional solid background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show only on tablets & mobiles */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+  }
+
+  .nav-list.active {
+    display: flex; /* visible when active */
+  }
 }
