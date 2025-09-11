@@ -255,7 +255,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 590px;
+  padding: 12px 102px;
   background-color: white;
   gap: 20px;
   flex-wrap: nowrap; /* no wrapping */
