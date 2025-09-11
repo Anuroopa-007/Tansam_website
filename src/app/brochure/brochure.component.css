@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Ubuntu:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    margin-top: 30px;
+    text-align: center;
+    color: #009999;
+    font-size: 24px;
+    font-family: "Afacad Flux", serif;
+}
+
+/* Container for Brochures */
+.brochure-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    /* padding: 30px; */
+}
+
+/* Individual Brochure Card */
+.brochure-card {
+    width: 280px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.brochure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Brochure Thumbnail */
+.brochure-thumbnail {
+    width: 100%;
+    height: 280px;
+    object-fit: fill;
+    border-bottom: 2.5px solid #F3E5AB ;
+}
+
+/* Brochure Title */
+.brochure-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #01539A;
+    margin: 15px 10px;
+    text-transform: capitalize;
+    font-family: "Ubuntu", serif;
+}
+
+/* Open PDF Button */
+.open-btn {
+    background: linear-gradient(45deg, #009999, #01539A);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.open-btn:hover {
+    background: linear-gradient(45deg, #007777, #003f7f);
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .brochure-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .brochure-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .brochure-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brochure-card {
+        width: 90%;
+    }
+
+    .brochure-title {
+        font-size: 14px;
+    }
+
+    .open-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+
+
+/* new work */
+  .timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .timeline-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+
+  .underline {
+    width: 50px;
+    height: 4px;
+    background: #00569A;
+    margin: 10px auto 30px auto;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    border-left: 2px solid #00569A;
+  }
+
+  .phase-label {
+    color: #00569A;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding-left: 10px;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+
+  /* NEW FLEX ROW for marker + content */
+  .timeline-row {
+    display: flex;
+    align-items: center; /* vertically center marker */
+    gap: 20px;
+    position: relative;
+  }
+
+  /* Dot marker */
+  .timeline-marker {
+    width: 14px;
+    height: 14px;
+    background: #00569A;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: -47px; /* align it with the line */
+    animation: bounce 1.5s infinite;
+  }
+
+  /* Timeline bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .timeline-content {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    flex: 1;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+  }
+
+  .timeline-content h3 span {
+    font-weight: 600;
+    margin-left: 8px;
+    color: #555;
+  }
+
+  .timeline-content p,
+  .timeline-content ul {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .timeline-content ul {
+    padding-left: 20px;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 14px;
+    background: none;
+    color: #00569A;
+    border: 1px solid #00569A;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  button:hover {
+    background: #00569A;
+    color: #fff;
+  }
+
+  /* deep dive */
+
+  .deep-dive-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00569A; /* pink color */
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .deep-dive-link:hover {
+    color: #00569A; /* darker pink on hover */
+  }
+
+  .deep-dive-link .arrow {
+    margin-left: 6px;
+    font-weight: 700;
+    font-size: 18px;
+    transition: margin-left 0.3s ease;
+  }
+
+  .deep-dive-link:hover .arrow {
+    margin-left: 12px; /* arrow moves right on hover */
+  }
