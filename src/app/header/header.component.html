@@ -1,3 +1,4 @@
+<div class="sticky-header" [ngClass]="{ sticky: isScrolled }">
 <div class="header" id="header">
   <div class="topline">
     <div class="container">
@@ -24,19 +25,8 @@
       </div>
     </div>
   </div>
-
-  <div class="scrollingnotif">
-    <!-- Notification content (optional) -->
-  </div>
-
-  <!-- <div class="rightside">
-    <a href="/sitemap"><i class="fa-solid fa-sitemap"></i> SITE Map </a>
-  </div> -->
 </div>
 
-
-
-<!-- Logo section -->
 <!-- Logo section -->
 <section class="header-container logosection">
   <!-- Left Logos (Now Siemens & TANSAM) -->
@@ -59,11 +49,8 @@
   </div>
 </section>
 
-
-
-
     <!-- Navigation start here -->
-    <nav class="navbar" [ngClass]="{ sticky: isScrolled }">
+    <nav class="navbar">
       <!-- Hamburger Menu (Toggles Open/Close) -->
       <div
         class="hamburger"
@@ -79,32 +66,7 @@
           <a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a>
         </li>
 
-        <!-- Technical Capabilities -->
-        <!-- <li class="dropdown" [ngClass]="{ 'active': isDropdownOpen['Technical_capability'] }"
-          (click)="toggleDropdown('Technical_capability')">
-          <span class="active">
-            Technical Capabilities
-            <i
-              class="fa-solid"
-              [ngClass]="{
-                'fa-chevron-down': !isDropdownOpen['Technical_capability'],
-                'fa-chevron-up': isDropdownOpen['Technical_capability']
-              }"
-            ></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Under_develop</a></li>
-            <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['Naan_mudhalvan/faculty_development/']">
-              Under_develop</a></li>
-          </ul>
-        </li> -->
 
-        <!-- LABS Dropdown -->
-        <li
-        class="dropdown"
-        [ngClass]="{ active: isDropdownOpen['labs'] }"
-        (click)="toggleDropdown('labs')"
-      >
       <li class="labs-dropdown">
         <span class="menu-label">
           Our Research Labs
@@ -120,45 +82,6 @@
           <li><a [routerLink]="['/lab/Predictive_Engineering']">Predictive Engineering</a></li>
         </ul>
       </li>
-
-
-        <!-- <li
-          class="dropdown"
-          [ngClass]="{ active: isDropdownOpen['services'] }"
-          (click)="toggleDropdown('services')"
-        >
-          <span class="active">
-            Labs
-            <i
-              class="fa-solid"
-              [ngClass]="{
-                'fa-chevron-down': !isDropdownOpen['services'],
-                'fa-chevron-up': isDropdownOpen['services']
-              }"
-            ></i>
-          </span>
-          <ul class="dropdown-menu">
-            <li *ngFor="let lab of labs">
-              <i class="fa-solid fa-angles-right"></i>
-              <a [routerLink]="['/labs', lab.key]">{{ lab.title }}</a>
-            </li>
-          </ul>
-        </li> -->
-
-        <!-- Technical Capabilities -->
-        <!-- <li class="dropdown" [ngClass]="{ 'active': isDropdownOpen['Project'] }"
-            (click)="toggleDropdown('Project')">
-            <span class="active">
-              Project
-              <i class="fa-solid"
-                [ngClass]="{ 'fa-chevron-down': !isDropdownOpen['Project'], 'fa-chevron-up': isDropdownOpen['Project'] }"></i>
-            </span>
-            <ul class="dropdown-menu">
-              <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Under_develop</a></li>
-              <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['Naan_mudhalvan/faculty_development/']">
-                Under_develop</a></li>
-            </ul>
-          </li> -->
 
         <!-- Naan Mudhalvan Dropdown -->
         <li
@@ -180,7 +103,6 @@
             <li class="no-arrow">
               <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
             </li>
-            <!-- <li><i class="fa-solid fa-angles-right"></i><a [routerLink]="['']">Other Initiative</a></li> -->
           </ul>
         </li>
 
@@ -202,22 +124,6 @@
           </span>
           <ul class="dropdown-menu">
             <li class="no-arrow" *ngFor="let media of mediaItems">
-              <!-- <i class="fa-solid fa-angles-right"></i> -->
-              <!-- <a
-                [routerLink]="
-                  media.name === 'Print_Media'
-                    ? ['/media', media.name]
-                    : media.name === 'Events'
-                    ? ['/events']
-                    : media.name === 'Linkedin'
-                    ? ['/TANSAM/LinkedIN']
-                    : ['/']
-                "
-                >{{ media.name }}</a
-              > -->
-              <!-- <a [routerLink]="['/media', media.id]">
-                {{ media.name.replace("_", " ") }}
-              </a> -->
               <a
                 [routerLink]="
                   media.name === 'Events'
@@ -234,56 +140,8 @@
         </li>
 
         <li class="active"><a [routerLink]="['Brochure']">Digital Transformation</a></li>
-        <!-- <li class="active"><a [routerLink]="['']">Achievement</a></li> -->
         <li class="active"><a [routerLink]="">Latest News</a></li>
-        <!-- <li class="active"><a [routerLink]="">More</a></li> -->
       </ul>
     </nav>
-
-  <!-- Navigation end here -->
-
-<!-- Full Screen Dull Overlay -->
-<div class="dull-overlay" id="dullOverlay"></div>
-
-<!-- Right side overlay panel -->
-<div class="overlay-panel hidden" id="overlayPanel">
-  <div class="panel-content">
-    <img src="/assets/mainpageimage/tansamlogo.png" />
-    <p>
-      Tamil Nadu Industrial Development Corporation (TIDCO) to establish The
-      Tamil Nadu Smart and Advanced Manufacturing Centre (TANSAM) at the TIDEL
-      Park, Chennai.
-    </p>
-  </div>
-
-  <div class="panel-content2">
-    <h3>Contact US</h3>
-
-    <!-- Contact Details -->
-    <div class="contact-details">
-      <div class="detail">
-        <i class="fa-solid fa-envelope"></i>
-        <p>
-          <a href="mailto:contact&#64;tansam.org">contact&#64;tansam.org</a> |
-          <a href="mailto:nateshc&#64;tansam.org">nateshc&#64;tansam.org</a>
-        </p>
-      </div>
-      <div class="detail">
-        <i class="fa-solid fa-phone"></i>
-        <p>+91 96000 91359 | 98840 35145</p>
-      </div>
-      <div class="detail">
-        <i class="fa-solid fa-location-dot"></i>
-        <p>
-          TIDEL Park, Rajiv Gandhi IT Expy, Tharamani, Chennai, Tamil Nadu
-          600113
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Right side frame toggle -->
-<!-- <div class="rightsideframe" id="rightsideframe" (click)="togglePanelVisibility()">
-  <i id="toggleIcon" class="fa-solid fa-angles-right"></i>
-</div> -->
-
+  <!-- Navigation end here -->
