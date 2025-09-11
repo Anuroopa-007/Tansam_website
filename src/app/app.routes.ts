@@ -43,7 +43,7 @@ export const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'Naan_mudhlvan/up_skilling', component: NaanmudhalvanComponent },
   { path: 'Naan_mudhalvan/faculty_development', component: FacultyComponent },
-  { path: 'Brochure', component: BrochureComponent },
+  { path: 'Digital-Transformation', component: BrochureComponent },
   { path: 'contact_us', component: ContactComponent },
   { path: 'GCC', component: GciComponent },
   { path: 'events', component: EventsComponent },

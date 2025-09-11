@@ -138,8 +138,34 @@
             </li>
           </ul>
         </li>
+        <!-- Digital Transformation Dropdown -->
+<li
+class="dropdown"
+[ngClass]="{ active: isDropdownOpen['digital'] }"
+(click)="toggleDropdown('digital')"
+>
+<span class="active">
+  Digital Transformation
+  <i
+    class="fa-solid"
+    [ngClass]="{
+      'fa-chevron-down': !isDropdownOpen['digital'],
+      'fa-chevron-up': isDropdownOpen['digital']
+    }"
+  ></i>
+</span>
+<ul class="dropdown-menu">
+  <li class="no-arrow">
+    <a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Full Stack</a>
+  </li>
+  <li class="no-arrow">
+    <a [routerLink]="['/ai']" (click)="closeMenu()">AI</a>
+  </li>
+</ul>
+</li>
 
-        <li class="active"><a [routerLink]="['Brochure']" (click)="closeMenu()">Digital Transformation</a></li>
+
+        <!-- <li class="active"><a [routerLink]="['Digital-Transformation']" (click)="closeMenu()">Digital Transformation</a></li> -->
         <li class="active"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li>
       </ul>
     </nav>
