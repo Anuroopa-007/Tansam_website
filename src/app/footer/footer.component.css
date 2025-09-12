@@ -11,6 +11,9 @@
     z-index: 1;
     border-radius: 1px 1px 0 0;
     border: 1px solid #ccc;
+    /* background: url("/assets/headerimage/header_background.png") no-repeat center center;
+    background-size: cover; */
+  
 }
 
 /* Animated Horizontal Lines */
