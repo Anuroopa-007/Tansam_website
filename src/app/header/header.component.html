@@ -61,14 +61,14 @@
       </div>
 
       <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
-        <li class="active" ><a href="#">Home</a></li>
+        <li class="active" ><a href="#" (click)="closeMenu()">Home</a></li>
         <li class="active">
-          <a [routerLink]="['/aboutus']" routerLinkActive="active">About Us</a>
+          <a [routerLink]="['/aboutus']" routerLinkActive="active" (click)="closeMenu()" >About Us</a>
         </li>
 
 
       <li class="labs-dropdown">
-        <span class="menu-label">
+        <span class="menu-label" (click)="closeMenu()">
           Our Research Labs
           <i class="fa-solid fa-chevron-down"></i>
         </span>
@@ -89,7 +89,7 @@
           [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }"
           (click)="toggleDropdown('naanmudhalvan')"
         >
-          <span class="active">
+          <span class="active" (click)="closeMenu()">
             Skilling Programs
             <i
               class="fa-solid"
@@ -138,9 +138,35 @@
             </li>
           </ul>
         </li>
+        <!-- Digital Transformation Dropdown -->
+<li
+class="dropdown"
+[ngClass]="{ active: isDropdownOpen['digital'] }"
+(click)="toggleDropdown('digital')"
+>
+<span class="active">
+  Digital Transformation
+  <i
+    class="fa-solid"
+    [ngClass]="{
+      'fa-chevron-down': !isDropdownOpen['digital'],
+      'fa-chevron-up': isDropdownOpen['digital']
+    }"
+  ></i>
+</span>
+<ul class="dropdown-menu">
+  <li class="no-arrow">
+    <a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Full Stack</a>
+  </li>
+  <li class="no-arrow">
+    <a [routerLink]="['/ai']" (click)="closeMenu()">AI</a>
+  </li>
+</ul>
+</li>
 
-        <li class="active"><a [routerLink]="['Brochure']">Digital Transformation</a></li>
-        <li class="active"><a [routerLink]="">Latest News</a></li>
+
+        <!-- <li class="active"><a [routerLink]="['Digital-Transformation']" (click)="closeMenu()">Digital Transformation</a></li> -->
+        <li class="active"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li>
       </ul>
     </nav>
 </div>
