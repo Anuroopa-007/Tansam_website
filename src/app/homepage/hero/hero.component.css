@@ -49,6 +49,7 @@
   padding: 20px;
 }
 
+/* Default state: hidden */
 .arrow {
   position: absolute;
   top: 50%;
@@ -60,6 +61,9 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 10;
+  opacity: 0;               /* 🔹 Hide by default */
+  visibility: hidden;       /* 🔹 Prevent click when hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .prev {
@@ -69,6 +73,13 @@
 .next {
   right: 20px;
 }
+
+/* Show arrows only on hover of slider */
+.hero-slider:hover .arrow {
+  opacity: 1;               /* 🔹 Fade in */
+  visibility: visible;      /* 🔹 Make clickable */
+}
+
 
 /* News Sidebar */
 .hero-news {

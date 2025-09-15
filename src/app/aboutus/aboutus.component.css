@@ -31,14 +31,14 @@
   transition: all 0.3s ease-in-out;
   font-size: 16px;
   font-weight: bold;
-  color: #009999;  
+  color: #00569A;
   /* font-family: "Ubuntu", sans-serif; */
 
 }
 
 .tab:hover,
 .tab.active {
-  background: #009999;
+  background: #00569A;
   color: #F3E5AB;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .tab-content h4 {
-  color: #009999;
+  color: #00569A;
   font-family: "Afacad Flux", serif;
   font-size: 20px;
   margin-bottom: 5px;

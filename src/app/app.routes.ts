@@ -33,6 +33,7 @@ import { RCFAPComponent } from './lab/Research_Centre_For_Asset_Performance/RCFA
 import { ARVRComponent } from './lab/ar_vr/arvr';
 import { DeepDriveComponent } from './deep-drive/deep-drive';
 import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
+import { ArtificialIntelligence } from './Artificial-Intelligence/artificialintelligence';
 
 
 
@@ -76,6 +77,7 @@ export const routes: Routes = [
   { path: 'lab/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
   {path:'deep-drive',component:DeepDriveComponent},
   { path: 'lab/Product_Innovation_Center', component: PICComponent },
+  {path:'ai',component:ArtificialIntelligence}
 
 
 

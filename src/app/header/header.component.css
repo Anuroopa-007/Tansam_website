@@ -251,6 +251,14 @@
 .labs-grid li {
   padding: 8px 12px;
 }
+/* Show dropdown only when active (click), not hover */
+.dropdown.active .dropdown-menu,
+.dropdown.active .labs-grid {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
 
 /* ================================
    Responsive
