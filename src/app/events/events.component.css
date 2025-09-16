@@ -40,7 +40,7 @@ body {
   font-family: "Afacad Flux", serif;
   flex-shrink: 0;
   padding: 12px 20px;
-  background: #009999;
+  background: #00569a;
   /* Light yellow */
   color: #F3E5AB;
   /* Teal */
@@ -59,7 +59,7 @@ body {
 .menu button.active {
   background-color: #F3E5AB;
   /* Teal */
-  color: #009999;
+  color: #00569a;
   /* Light yellow */
   transform: translateY(2px);
   border: 2px solid #007777;

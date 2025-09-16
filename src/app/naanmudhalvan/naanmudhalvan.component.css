@@ -17,12 +17,12 @@
     text-align: justify;
     width: 70%;
     margin: 0 auto;
-    color: #009999;
+    color: #00569A;
     font-family: "Poppins", serif;
 }
 
 .color h2 {
-    color: #009999 !important;
+    color: #00569A !important;
     margin-left: 40px;
     font-family: "Afacad Flux", serif;
     display: inline-block;
@@ -70,7 +70,7 @@ td {
 }
 
 th {
-    background-color: #009999 !important;
+    background-color: #00569A !important;
     color: #F3E5AB;
 }
 

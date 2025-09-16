@@ -24,7 +24,7 @@
       <div class="scrolling-content">
         <a class="notification-link" href="">
           <p class="notification-text">
-            <i class="fa-solid fa-bell fa-shake"></i> TANSAM is establishing academic Spoke centre's across Tamilnadu!!!
+            <i class="fa-solid fa-bell fa-shake"></i> TANSAM is establishing academic Spoke centres across Tamilnadu!!!
           </p>
         </a>
       </div>
@@ -86,12 +86,22 @@
         </li>
 
 
-      <li class="labs-dropdown">
-        <span class="menu-label" (click)="closeMenu()">
+        <li
+        class="dropdown"
+        [ngClass]="{ active: isDropdownOpen['labs'] }"
+        (click)="toggleDropdown('labs')"
+      >
+        <span class="menu-label">
           Our Research Labs
-          <i class="fa-solid fa-chevron-down"></i>
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-chevron-down': !isDropdownOpen['labs'],
+              'fa-chevron-up': isDropdownOpen['labs']
+            }"
+          ></i>
         </span>
-        <ul class="labs-grid">
+        <ul class="labs-grid" *ngIf="isDropdownOpen['labs']">
           <li><a [routerLink]="['/lab/Innovative_Manufacturing']">Innovative Manufacturing</a></li>
           <li><a [routerLink]="['/lab/Smart_Factory_Center']">Smart Factory Center</a></li>
           <li><a [routerLink]="['/lab/ar_vr']">AR | VR | MR Research Centre</a></li>
@@ -101,6 +111,7 @@
           <li><a [routerLink]="['/lab/Predictive_Engineering']">Predictive Engineering</a></li>
         </ul>
       </li>
+
 
         <!-- Naan Mudhalvan Dropdown -->
         <li
@@ -122,6 +133,9 @@
             <li class="no-arrow">
               <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
             </li>
+            <li class="no-arrow">
+              <a [routerLink]="['skilling']">Skilling Ecosystem</a>
+            </li>
           </ul>
         </li>
 
@@ -132,7 +146,7 @@
           (click)="toggleDropdown('media')"
         >
           <span class="active">
-            Our Strength
+            Social Presence
             <i
               class="fa-solid"
               [ngClass]="{

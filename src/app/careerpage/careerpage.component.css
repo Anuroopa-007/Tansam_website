@@ -25,7 +25,7 @@
 }
 .title h2 {
     font-family: "Ubuntu", sans-serif;
-    color: #009999;
+    color: #00569a;
     font-size: 30px;
 }
 
@@ -49,7 +49,7 @@
     color: #989898;
     font-size: 20px;
 }
-/* 
+/*
 Career card style START
 */
 .careercard {
@@ -71,7 +71,7 @@ Career card style START
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
@@ -141,7 +141,7 @@ Career card style START
 
 .titledate h3{
     font-family: "Afacad Flux", sans-serif;
-    color: #009999;
+    color: #00569a;
     font-size: 25px;
     margin: 0;
 }
@@ -157,11 +157,11 @@ Career card style START
     justify-content: space-between;
     align-items: center;
 }
-/* 
+/*
 Career card style END
 */
 
-/* 
+/*
 Pagination START
 */
 .pagination {
@@ -197,6 +197,6 @@ Pagination START
     font-weight: bold;
 }
 
-/* 
+/*
 Pagination END
 */
