@@ -1,4 +1,3 @@
-<!-- <app-navigationpath></app-navigationpath> -->
 <div class="about-container">
   <!-- Tabs Navigation -->
   <div class="tabs">
@@ -16,9 +15,58 @@
   <div class="tab-content">
     <ng-container *ngFor="let tabItem of tabs">
       <div *ngIf="selectedTab === tabItem.id">
-        <!-- <h2>{{ tabItem.title }}</h2> -->
-        <h4>{{ tabItem.title1 }}</h4>
-        <p>{{ tabItem.content }}</p>
+
+        <!-- Special layout for OUR STRENGTH -->
+        <div *ngIf="tabItem.id === 'Our Strength'" class="strength-container">
+          <h2>{{ tabItem.title }}</h2>
+
+          <div class="strength-grid">
+            <!-- Left: Skill Spectrum -->
+            <div class="chart-box">
+              <h3>Skill Spectrum</h3>
+              <img [src]="tabItem.chartImage" alt="Skill Spectrum Chart" />
+            </div>
+
+            <!-- Right: Word Cloud + Stats -->
+            <div class="stats-box">
+              <img [src]="tabItem.wordCloudImage" alt="Word Cloud Trophy" />
+              <div class="experience">
+                Man Years of Experience: ~{{ tabItem.experience }}
+              </div>
+              <div class="skills">
+                Total # of Unique Skills: {{ tabItem.skillsCount }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Courses -->
+          <div class="courses-grid">
+            <div *ngFor="let group of tabItem.courses" class="course-group">
+              <ul>
+                <li *ngFor="let course of group">{{ course }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Default layout for other tabs -->
+        <div *ngIf="tabItem.id !== 'Our Strength'">
+          <!-- Show image above text -->
+          <div class="tab-image" *ngIf="tabItem.image">
+            <img [src]="tabItem.image" [alt]="tabItem.title" />
+          </div>
+
+          <!-- If multiple logos -->
+          <div class="tab-logos" *ngIf="tabItem.images">
+            <div *ngFor="let logo of tabItem.images" class="logo-box">
+              <img [src]="logo" [alt]="tabItem.title + ' logo'" />
+            </div>
+          </div>
+
+          <h4>{{ tabItem.title1 }}</h4>
+          <p>{{ tabItem.content }}</p>
+        </div>
+
       </div>
     </ng-container>
   </div>

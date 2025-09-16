@@ -143,3 +143,45 @@
     font-size: 16px;
   }
 }
+
+
+
+
+.tab-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-image img {
+  max-width: 77%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.tab-logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-box img {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Special case for last row (center align single logo) */
+.tab-logos .logo-box:last-child:nth-child(odd) {
+  grid-column: span 2;
+  justify-self: center;
+}
