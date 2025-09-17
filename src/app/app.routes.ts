@@ -35,6 +35,8 @@ import { DeepDriveComponent } from './deep-drive/deep-drive';
 import { PICComponent } from './lab/Product_Innovation_Center/PIC.component';
 import { ArtificialIntelligence } from './Artificial-Intelligence/artificialintelligence';
 import { SkillingProgram } from './Skilling-program/skillingprogram';
+import { Academia } from './academia/academia';
+import { Courseware } from './courseware/courseware';
 
 
 
@@ -79,7 +81,9 @@ export const routes: Routes = [
   {path:'deep-drive',component:DeepDriveComponent},
   { path: 'lab/Product_Innovation_Center', component: PICComponent },
   {path:'ai',component:ArtificialIntelligence},
-  {path:'skilling',component:SkillingProgram}
+  {path:'skilling',component:SkillingProgram},
+  {path:'academia',component:Academia  },
+  {path:'courseware',component:Courseware}
 
 
 
