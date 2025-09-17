@@ -68,3 +68,87 @@
     padding: 0.5rem;
   }
 }
+
+
+/* Academia Section */
+.academia-container {
+  margin: 40px 20px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.academia-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+}
+
+.academia-flow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.academia-box {
+  flex: 1;
+  min-width: 250px;
+  background: #eaf1fb;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.academia-box h3 {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.academia-box ul {
+  list-style: disc;
+  margin: 0 auto 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.sub-points {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.benefits-row {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.benefit {
+  background: #444;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.benefit.highlight {
+  background: #e67e22; /* Orange highlight */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .academia-flow {
+    flex-direction: column;
+  }
+}
