@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 interface InfoBlock {
   title: string;
   items: string[];
   icon?: string; // optional inline SVG name
 }
-
 interface CourseDetail {
   domain: string;
   software: string[];
   jobs: string[];
 }
-
 @Component({
-  selector: 'app-skilling-ecosystem',
-  templateUrl: './skillingprogram.html',
-  styleUrls: ['./skillingprogram.scss']
+  selector:'app-skillingprogram',
+  imports:[],
+  standalone:true,
+  templateUrl:'./skillingprogram.html',
+  styleUrl:'./skillingprogram.css'
 })
-export class SkillingEcosystemComponent {
+
+export class SkillingProgram{
+
   heroTitle = 'Skilling Ecosystem';
   heroSubtitle = 'Empowering industries, academia, and professionals with future-ready skills';
 
@@ -66,3 +68,5 @@ export class SkillingEcosystemComponent {
     this.selectedCourseName = name;
   }
 }
+
+
