@@ -1,25 +1,26 @@
-<!-- arvr.html -->
-<div class="im-container">
-  <h1>AR/VR/MR Research Lab</h1>
+<div class="lab-container">
+  <!-- Main Heading -->
+  <h1 class="lab-heading">AR/VR/MR Research Lab</h1>
 
-  <!-- Section 1: Image left, content right -->
-  <section class="im-section">
-    <img src="assets/bannerimage/ar1.jpeg" alt="AR/VR/MR Lab Overview">
-    <div class="im-content">
+  <!-- Box 1: Overview with Read More -->
+  <div class="lab-box">
+    <img src="assets/bannerimage/ar1.jpeg" alt="AR/VR/MR Overview">
+    <div class="lab-text">
       <h2>Overview</h2>
       <p>
-        The AR/VR/MR Research Lab is dedicated to pioneering immersive technologies that redefine how we train, learn, and interact with digital content. Our primary focus is on developing high-impact Virtual Reality (VR) simulations and training systems, while also exploring Augmented Reality (AR) and Mixed Reality (MR) to enhance real-world workflows and educational experiences.
-      </p>
-      <p>
-        By blending cutting-edge 3D environments, intelligent interaction design, and real-time responsiveness, we create powerful immersive applications for industries including education, healthcare, manufacturing, and defence. Our goal is to provide scalable, repeatable, and measurable solutions that drive performance and reduce risk in real-world tasks.
+        {{ showFullOverview ? overviewText : trimmedOverviewText }}
+        <span *ngIf="isTextLong">
+          <button class="read-more-btn" (click)="toggleOverview()">
+            {{ showFullOverview ? 'Read less' : 'Read more...' }}
+          </button>
+        </span>
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- Section 2: Image right, content left -->
-  <section class="im-section reverse">
-    <img src="assets/bannerimage/ar2.jpeg" alt="AR/VR/MR Services">
-    <div class="im-content">
+  <!-- Box 2: Services Offered -->
+  <div class="lab-box row-layout">
+    <div class="lab-text">
       <h2>Services Offered</h2>
       <ul>
         <li>Augmented Reality Apps</li>
@@ -27,42 +28,33 @@
         <li>Mixed Reality Apps</li>
       </ul>
     </div>
-  </section>
+    <img src="assets/bannerimage/ar2.jpeg" alt="AR/VR Services">
+  </div>
 
-  <!-- Section 3: Image left, content right (multi-column competency & tools) -->
-  <section class="im-section section-3">
-    <img src="assets/bannerimage/ar3.jpeg" alt="AR/VR/MR Skills & Tools">
-    <div class="im-content">
+  <!-- Box 3: Competency & Tools -->
+  <div class="lab-box row-layout">
+    <img src="assets/bannerimage/ar3.jpeg" alt="AR/VR Tools">
+    <div class="lab-text">
       <h2>Competency & Tools</h2>
-
-      <!-- Competency & Skills -->
-      <div class="lists-container">
-        <div class="list-column">
-          <h3>Competency & Skills</h3>
-          <ul>
-            <li>3D Modelling</li>
-            <li>C#</li>
-            <li>3D Product Designer</li>
-          </ul>
-        </div>
-        <div class="list-column">
-          <ul>
-            <li>Shader Graph Rigging</li>
-            <li>Cinematics</li>
-            <li>Animations</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Software Tools -->
-      <h3>Software Tools</h3>
       <ul>
-        <li>Unity 3D</li>
-        <li>Blender</li>
-        <li>Meta Spatial Editor</li>
-        <li>Snap AR</li>
-        <li>Web XR</li>
+        <li>3D Modelling</li>
+        <li>C# Development</li>
+        <li>Animations</li>
+        <li>Unity 3D / Blender</li>
       </ul>
     </div>
-  </section>
+  </div>
+
+  <!-- Box 4: Case Study -->
+  <div class="lab-box">
+    <div class="lab-text">
+      <h2>Case Study</h2>
+      <p>
+        Our AR/VR case studies highlight real-world applications of immersive
+        technologies in training, manufacturing, and education. Each solution
+        is tailored to industry-specific needs, demonstrating measurable impact
+        on performance, safety, and efficiency.
+      </p>
+    </div>
+  </div>
 </div>
