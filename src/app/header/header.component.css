@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  /* background: url("/assets/headerimage/header_background.png") no-repeat center center; */
+  background: url("/assets/headerimage/header_background.png") no-repeat center center; 
   background-size: cover;
   gap: 20px;
   flex-wrap: nowrap;
