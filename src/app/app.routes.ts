@@ -84,7 +84,4 @@ export const routes: Routes = [
   {path:'skilling',component:SkillingProgram},
   {path:'academia',component:Academia  },
   {path:'courseware',component:Courseware}
-
-
-
 ];
