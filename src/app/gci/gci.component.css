@@ -21,7 +21,7 @@
   text-align: center;
   font-size: 32px;
   font-weight: bold;
-  color: #009999;
+  color: #00569a;
   margin-bottom: 10px;
   font-family: "Afacad Flux", serif;
   /* background: url('/assets/bg/gcc_bg.jpg') no-repeat center center;
@@ -90,12 +90,12 @@
   transition: all 0.3s ease-in-out;
   font-size: 16px;
   font-weight: bold;
-  color: #009999;
+  color: #00569a;
 }
 
 .tab:hover,
 .tab.active {
-  background: #009999;
+  background: #00569a;
   color: #F3E5AB;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .table th {
-  background: #009999;
+  background: #00569a;
   color: #F3E5AB;
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -148,7 +148,7 @@
 .section-title {
   font-size: 28px;
   font-weight: bold;
-  color: #009999;
+  color: #00569a;
   text-align: center;
   margin-bottom: 15px;
   font-family: "Afacad Flux", serif;
@@ -184,7 +184,7 @@
 
 .industries h2, .connect h2 {
   font-size: 24px;
-  color: #009999;
+  color: #00569a;
   margin-bottom: 10px;
   font-family: "Afacad Flux", serif;
 }
@@ -232,7 +232,7 @@
 
 .contact-card h2 {
   font-size: 24px;
-  color: #009999;
+  color: #00569a;
   margin-bottom: 10px;
   font-family: "Afacad Flux", serif;
 }
@@ -245,7 +245,7 @@
 }
 
 .contact-card a {
-  color: #009999;
+  color: #00569a;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease-in-out;

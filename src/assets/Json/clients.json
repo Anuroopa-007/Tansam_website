@@ -1,6 +1,37 @@
 [
-    { "src": "assets/patners/caterpiller.png", "alt": "Caterpiller", "link": "https://www.caterpillar.com/" },
-    { "src": "assets/patners/jsw.png", "alt": "JSW", "link": "https://www.jsw.in/groups/partners-progress" },
-    { "src": "assets/patners/renalutnissan.png", "alt": "renault", "link": "https://rntbci.in/" },
-    { "src": "assets/bannerimage/tansam-about.jpeg","alt":"DPH","link":"https://cd.tndphpm.com/"}
-  ]
+  { 
+    "src": "assets/patners/caterpiller.png", 
+    "alt": "Caterpiller", 
+    "link": "https://www.caterpillar.com/" 
+  },
+  { 
+    "src": "assets/patners/jsw.png", 
+    "alt": "JSW", 
+    "link": "https://www.jsw.in/groups/partners-progress" 
+  },
+  { 
+    "src": "assets/patners/renalutnissan.png", 
+    "alt": "Renault Nissan", 
+    "link": "https://rntbci.in/" 
+  },
+  { 
+    "src": "assets/bannerimage/tansam-about.jpeg",
+    "alt": "DPH",
+    "link": "https://cd.tndphpm.com/" 
+  },
+  {
+    "src": "assets/patners/flex2.png",
+    "alt": "Flextronics",
+    "link": "https://www.flex.com"
+  },
+  {
+    "src": "assets/patners/Highways_dept.png",
+    "alt": "Highways Department",
+    "link": "https://tnhighways.tn.gov.in"
+  },
+  {
+    "src": "assets/patners/ortholite.png",
+    "alt": "Ortholite",
+    "link": "https://www.ortholite.com"
+  }
+]

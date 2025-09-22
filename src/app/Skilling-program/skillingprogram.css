@@ -1,0 +1,210 @@
+:host {
+  display: block;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(90deg, #0f4af2 0%, #3b82f6 100%);
+  color: white;
+  padding: 4.5rem 1rem;
+  text-align: center;
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    margin-top: 0.75rem;
+    opacity: 0.95;
+    font-size: 1.05rem;
+  }
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  color: #0b3a9a;
+  font-weight: 600;
+}
+
+/* CARDS GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.1rem;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+  border: 1px solid rgba(15,23,42,0.04);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(59,130,246,0.06), #f8fbff);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+
+    svg {
+      width: 22px;
+      height: 22px;
+      stroke: #0f172a;
+      stroke-width: 1.2;
+      fill: none;
+    }
+  }
+
+  .card-title {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0b3a9a;
+  }
+
+  .card-list {
+    margin: 0;
+    padding-left: 1.05rem;
+    color: #334155;
+    font-size: 0.965rem;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15,23,42,0.08);
+  }
+}
+
+/* STATS ROW */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+  align-items: center;
+  text-align: center;
+
+  .stat {
+    background: transparent;
+    padding: 1rem 0;
+    border-radius: 8px;
+    min-height: 80px;
+
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0b3a9a;
+      margin: 0;
+    }
+    .stat-label {
+      margin: 0.25rem 0 0;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* COURSES */
+.alt {
+  background: #f8fafc;
+  padding: 1.25rem 0.75rem;
+  border-top: 1px solid rgba(2,6,23,0.02);
+  border-bottom: 1px solid rgba(2,6,23,0.02);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.course-pill {
+  background: white;
+  border: 1px solid rgba(2,6,23,0.06);
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.course-pill:hover {
+  transform: translateY(-4px);
+  background: #eff6ff;
+  border-color: rgba(59,130,246,0.22);
+}
+
+/* ACADEMIA STATS */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.academy-stat {
+  background: #047857;
+  color: white;
+  padding: 1.1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 8px 26px rgba(4,120,87,0.12);
+
+  .academy-value {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+  .academy-label {
+    margin: 0.35rem 0 0;
+    opacity: 0.95;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 880px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero { padding: 3rem 1rem; }
+  .hero h1 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .cards-grid { gap: 0.75rem; }
+  .course-grid { gap: 0.5rem; }
+}

@@ -11,9 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './newspaper.component.html',
   styleUrl: './newspaper.component.css',
 })
-export class NewspaperComponent implements OnInit {
-  images: string[] = [];
-  selectedImage: string | null = null;
+export class NewspaperComponent  {
+  // images: string[] = [];
+  // selectedImage: string | null = null;
   selectedCategoryName = 'Print_Media';
 
   constructor(
@@ -28,25 +28,25 @@ export class NewspaperComponent implements OnInit {
   //     this.loadPrintMediaImages();
   //   });
   // }
-ngOnInit(): void {
-  this.route.paramMap.subscribe((params) => {
-    const categoryId = params.get('id');
-    if (categoryId) {
-      this.loadMediaItemsByCategoryId(Number(categoryId));
-    }
-  });
-}
+// ngOnInit(): void {
+//   this.route.paramMap.subscribe((params) => {
+//     const categoryId = params.get('id');
+//     if (categoryId) {
+//       this.loadMediaItemsByCategoryId(Number(categoryId));
+//     }
+//   });
+// }
 
-loadMediaItemsByCategoryId(categoryId: number): void {
-  this.emailService.getMediaItemsByCategoryId(categoryId).subscribe({
-    next: (items) => {
-      this.images = items.map(item => item.image);
-    },
-    error: (error) => {
-      console.error('Failed to fetch media items', error);
-    }
-  });
-}
+// loadMediaItemsByCategoryId(categoryId: number): void {
+//   this.emailService.getMediaItemsByCategoryId(categoryId).subscribe({
+//     next: (items) => {
+//       this.images = items.map(item => item.image);
+//     },
+//     error: (error) => {
+//       console.error('Failed to fetch media items', error);
+//     }
+//   });
+// }
 
 
   // loadPrintMediaImages(): void {
@@ -56,6 +56,25 @@ loadMediaItemsByCategoryId(categoryId: number): void {
   //       this.images = items.map((item) => item.image); // image already has full URL
   //     });
   // }
+
+  // openModal(image: string) {
+  //   this.selectedImage = image;
+  // }
+
+  // closeModal() {
+  //   this.selectedImage = null;
+  // }
+
+  images: string[] = [
+    'assets/bannerimage/DPH-news.jpg',
+    // 'assets/newspaper/image2.jpg',
+    // 'assets/newspaper/image3.jpg',
+    // 'assets/newspaper/image4.jpg',
+    // 'assets/newspaper/image5.jpg',
+    // 'assets/newspaper/image6.jpg'
+  ];
+
+  selectedImage: string | null = null;
 
   openModal(image: string) {
     this.selectedImage = image;

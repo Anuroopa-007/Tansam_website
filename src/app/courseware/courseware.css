@@ -1,0 +1,154 @@
+.courseware-container {
+  margin: 20px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.table-title {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 1.2rem;
+  box-shadow: 0 8px 26px rgba(4,120,87,0.10);
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.courses-table th {
+  background-color: #00569a;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.courses-table td {
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+}
+
+.courses-table tr:nth-child(even) {
+  background-color: #eaf1fb;
+}
+
+.courses-table tr:hover {
+  background-color: #e6f7ec;
+}
+
+.highlight {
+  color: #cc1414; /* Red orange for software links */
+  font-weight: 600;
+}
+
+.highlight-red {
+  color: #e54829;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .courses-table {
+    font-size: 0.95rem;
+  }
+  .table-title {
+    font-size: 1.4rem;
+  }
+  .table-wrapper {
+    padding: 0.5rem;
+  }
+}
+
+
+/* Academia Section */
+.academia-container {
+  margin: 40px 20px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.academia-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+}
+
+.academia-flow {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.academia-box {
+  flex: 1;
+  min-width: 250px;
+  background: #eaf1fb;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.academia-box h3 {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.academia-box ul {
+  list-style: disc;
+  margin: 0 auto 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.sub-points {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.benefits-row {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.benefit {
+  background: #444;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.benefit.highlight {
+  background: #e67e22; /* Orange highlight */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .academia-flow {
+    flex-direction: column;
+  }
+}

@@ -16,9 +16,23 @@
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
+        <!-- Scrolling Notification -->
+  <div class="scrollingnotif">
+    <div class="notification-frame">
+      <!-- <span class="default-notification">New Notification</span> -->
+      <!-- Default notification -->
+      <div class="scrolling-content">
+        <a class="notification-link" href="">
+          <p class="notification-text">
+            <i class="fa-solid fa-bell fa-shake"></i> TANSAM is establishing academic Spoke centres across Tamilnadu!!!
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
 
       <div class="topright-container">
-        <div class="topright"><a [routerLink]="">Contact</a></div>
+        <div class="topright"><a [routerLink]="['contact_us']">Contact</a></div>
         <div class="topright"><a [routerLink]="['GCC']">GCC</a></div>
         <div class="topright"><a [routerLink]="['career']">Career</a></div>
         <div class="topright"><a [routerLink]="['internship_Reg']">Internship</a></div>
@@ -31,8 +45,9 @@
 <section class="header-container logosection">
   <!-- Left Logos (Now Siemens & TANSAM) -->
   <div class="logo-left">
-
+<a href="" target="">
     <img src="assets/headerimage/tansamoldlogo.png" alt="TANSAM Logo" />
+  </a>
     <img src="assets/headerimage/siemens.png" alt="Siemens Logo" />
   </div>
 
@@ -44,8 +59,12 @@
 
   <!-- Right Logos (Now TIDCO & TN Government) -->
   <div class="logo-right">
-    <img src="assets/headerimage/tidcologo.png" alt="TIDCO Logo" />
+    <a href="https://tidco.com/" target="_blank">
+      <img src="assets/headerimage/tidcologo.png" alt="TIDCO Logo" />
+    </a>
+    <a href="https://www.tn.gov.in/" target="_blank">
     <img src="assets/headerimage/tnlogo.png" alt="TN Logo" />
+  </a>
   </div>
 </section>
 
@@ -67,12 +86,22 @@
         </li>
 
 
-      <li class="labs-dropdown">
-        <span class="menu-label" (click)="closeMenu()">
+        <li
+        class="dropdown"
+        [ngClass]="{ active: isDropdownOpen['labs'] }"
+        (click)="toggleDropdown('labs')"
+      >
+        <span class="menu-label">
           Our Research Labs
-          <i class="fa-solid fa-chevron-down"></i>
+          <i
+            class="fa-solid"
+            [ngClass]="{
+              'fa-chevron-down': !isDropdownOpen['labs'],
+              'fa-chevron-up': isDropdownOpen['labs']
+            }"
+          ></i>
         </span>
-        <ul class="labs-grid">
+        <ul class="labs-grid" *ngIf="isDropdownOpen['labs']">
           <li><a [routerLink]="['/lab/Innovative_Manufacturing']">Innovative Manufacturing</a></li>
           <li><a [routerLink]="['/lab/Smart_Factory_Center']">Smart Factory Center</a></li>
           <li><a [routerLink]="['/lab/ar_vr']">AR | VR | MR Research Centre</a></li>
@@ -83,6 +112,7 @@
         </ul>
       </li>
 
+
         <!-- Naan Mudhalvan Dropdown -->
         <li
           class="dropdown"
@@ -90,7 +120,7 @@
           (click)="toggleDropdown('naanmudhalvan')"
         >
           <span class="active" (click)="closeMenu()">
-            Skilling Programs
+            Skilling
             <i
               class="fa-solid"
               [ngClass]="{
@@ -103,6 +133,15 @@
             <li class="no-arrow">
               <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
             </li>
+            <li class="no-arrow">
+              <a [routerLink]="['skilling']">Corporate</a>
+            </li>
+            <li class="no-arrow">
+              <a [routerLink]="['academia']">Academia</a>
+            </li>
+            <li class="no-arrow">
+              <a [routerLink]="['courseware']">Courseware</a>
+            </li>
           </ul>
         </li>
 
@@ -113,7 +152,7 @@
           (click)="toggleDropdown('media')"
         >
           <span class="active">
-            Our Strength
+            Social Presence
             <i
               class="fa-solid"
               [ngClass]="{
@@ -156,10 +195,10 @@ class="dropdown"
 </span>
 <ul class="dropdown-menu">
   <li class="no-arrow">
-    <a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Full Stack</a>
+    <a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Web & Mobile Development</a>
   </li>
   <li class="no-arrow">
-    <a [routerLink]="['/ai']" (click)="closeMenu()">AI</a>
+    <a [routerLink]="['/ai']" (click)="closeMenu()">Artificial Intelligence</a>
   </li>
 </ul>
 </li>

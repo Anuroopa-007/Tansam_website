@@ -127,13 +127,13 @@ body {
     text-align: center;
     font-size: 24px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #00569a;
   }
 
   .underline {
     width: 50px;
     height: 4px;
-    background: #00569A;
+    background: #000;
     margin: 10px auto 30px auto;
   }
 
