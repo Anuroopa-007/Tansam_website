@@ -527,7 +527,7 @@ newsletter */
   }
 
 
-
+/* updates */
 
 
   .entrepreneur-row {
@@ -544,7 +544,9 @@ newsletter */
     padding: 0;
     background: none;
     position: relative;
+    margin-left: 32px;      /* <-- This shifts the full column to the right */
   }
+
 
   .news-heading {
     font-size: 1.38rem;
@@ -628,13 +630,20 @@ newsletter */
   }
 
   .news-img {
-    width: 48px;
-    height: 48px;
+    width: 72px;              /* Make image larger */
+    height: 72px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #d6e3f8;
     margin-left: 18px;
     margin-right: 0;
+    cursor: pointer;          /* Show pointer on hover */
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+    box-shadow: 0 2px 8px rgba(32,64,128,0.10);
+  }
+  .news-img:hover {
+    transform: scale(1.08);   /* Optional: subtle zoom effect on hover */
+    box-shadow: 0 6px 24px rgba(32,64,128,0.18);
   }
 
   @media (max-width: 991px) {

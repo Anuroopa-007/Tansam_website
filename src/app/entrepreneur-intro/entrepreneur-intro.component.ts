@@ -14,17 +14,17 @@ export class EntrepreneurIntroComponent {
     {
       title: 'TANSAM Expands with Two New Spoke Centres in Hosur',
       date: '15SEP\'2025',
-      image: 'assets/news/hosur.jpg'
+      image: 'assets/bannerimage/entrepre-1.jpeg'
     },
     {
       title: 'New Spoke CoE at SA Engineering College',
       date: '4SEP\'2025',
-      image: 'assets/news/sa_engineering.jpg'
+      image: 'assets/bannerimage/entrepre-1.jpeg'
     },
     {
       title: 'Orientation Program at Hindustan Institute of Technology and Science',
       date: '25AUG\'2025',
-      image: 'assets/news/hindustan.jpg'
+      image: 'assets/bannerimage/entrepre-1.jpeg'
     },
   ];
   constructor(private router: Router) {}
