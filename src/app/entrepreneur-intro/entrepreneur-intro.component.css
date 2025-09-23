@@ -544,7 +544,7 @@ newsletter */
   padding: 0;
   background: none;
   position: relative;
-  margin-left: 32px; /* shifts the column */
+  margin-left: 32px;
 }
 
 .news-heading {
@@ -553,8 +553,12 @@ newsletter */
   color: #145ba7;
   margin-bottom: 24px;
   font-family: 'Rubik', sans-serif;
-  text-align: left;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 
 /* Timeline Container */
 .timeline-container {
@@ -581,7 +585,7 @@ newsletter */
   min-height: 100px;
   margin-bottom: 40px; /* gap between items */
 }
-/* 
+/*
 .timeline-dot {
   position: absolute;
   right: 11px;
