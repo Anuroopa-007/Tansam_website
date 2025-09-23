@@ -37,6 +37,7 @@ import { ArtificialIntelligence } from './Artificial-Intelligence/artificialinte
 import { SkillingProgram } from './Skilling-program/skillingprogram';
 import { Academia } from './academia/academia';
 import { Courseware } from './courseware/courseware';
+import { NewsLetterComponent } from './news-letter/news-letter';
 
 
 
@@ -83,5 +84,6 @@ export const routes: Routes = [
   {path:'ai',component:ArtificialIntelligence},
   {path:'skilling',component:SkillingProgram},
   {path:'academia',component:Academia  },
-  {path:'courseware',component:Courseware}
+  {path:'courseware',component:Courseware},
+  {path:'news-letter',component:NewsLetterComponent}
 ];
