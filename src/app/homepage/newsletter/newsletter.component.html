@@ -72,18 +72,39 @@
  -->
 
 <section class="programs">
-  <h2 class="programs-heading">Programslipp:</h2>
+  <h2 class="programs-heading">News and Events :</h2>
 
   <div class="programs-grid">
-    <div
-      class="program-card"
-      *ngFor="let program of programs; let i = index"
-      [style.background-image]="'url(' + program.image + ')'"
-      [ngClass]="'card-' + (i + 1)"
-    >
+    <!-- Row 1: 30% | 70% -->
+    <div class="program-card card-1" style="background-image: url('assets/bannerimage/entrepre-1.jpeg');">
       <div class="overlay">
-        <h3 class="program-title">{{ program.title }}</h3>
-        <p class="program-subtitle">{{ program.subtitle }}</p>
+        <h3 class="program-title">Program 1 Title</h3>
+        <p class="program-subtitle">Program 1 Subtitle</p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+    <div class="program-card card-2" style="background-image: url('assets/bannerimage/entrepre-1.jpeg');">
+      <div class="overlay">
+        <h3 class="program-title">Program 2 Title</h3>
+        <p class="program-subtitle">Program 2 Subtitle</p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+    <!-- Row 2: 70% | 30% -->
+    <div class="program-card card-3" style="background-image: url('assets/bannerimage/entrepre-1.jpeg');">
+      <div class="overlay">
+        <h3 class="program-title">Program 3 Title</h3>
+        <p class="program-subtitle">Program 3 Subtitle</p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+
+    <div class="program-card card-4" style="background-image: url('assets/bannerimage/entrepre-1.jpeg');">
+      <div class="overlay">
+        <h3 class="program-title">Program 4 Title</h3>
+        <p class="program-subtitle">Program 4 Subtitle</p>
         <span class="arrow">→</span>
       </div>
     </div>

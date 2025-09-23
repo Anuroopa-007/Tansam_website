@@ -12,7 +12,7 @@ import { EntrepreneurIntroComponent } from "../entrepreneur-intro/entrepreneur-i
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [HomesolutionComponent, PartnersComponent, AnnouncementComponent, NewsletterComponent, HeroComponent, CountComponent, EntrepreneurIntroComponent],
+  imports: [HomesolutionComponent, PartnersComponent, NewsletterComponent, HeroComponent, EntrepreneurIntroComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
