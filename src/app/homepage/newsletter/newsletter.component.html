@@ -19,3 +19,54 @@
     />
   </div>
 </div> -->
+
+<!--
+<div class="newsletter-grid">
+  <div class="newsletter-card" *ngFor="let item of newsletterItems">
+    <img [src]="item.image" [alt]="item.title" class="newsletter-img" />
+    <div class="newsletter-overlay">
+      <h2 class="newsletter-title">{{ item.title }}</h2>
+      <p class="newsletter-desc">{{ item.desc }}</p>
+      <span class="newsletter-arrow">&rarr;</span>
+    </div>
+  </div>
+</div>
+
+ -->
+
+
+
+ <div class="news-events-section">
+  <h2 class="section-title">News and Events</h2>
+  <div class="perfect-grid">
+    <div class="card portrait">
+      <img [src]="newsletterItems[0].image" [alt]="newsletterItems[0].title" />
+      <div class="overlay">
+        <div class="card-title">{{ newsletterItems[0].title }}</div>
+        <div class="card-desc">{{ newsletterItems[0].desc }}</div>
+      </div>
+    </div>
+    <div class="card landscape">
+      <img [src]="newsletterItems[1].image" [alt]="newsletterItems[1].title" />
+      <div class="overlay">
+        <div class="card-title">{{ newsletterItems[1].title }}</div>
+        <div class="card-desc">{{ newsletterItems[1].desc }}</div>
+      </div>
+    </div>
+    <div class="card landscape">
+      <img [src]="newsletterItems[2].image" [alt]="newsletterItems[2].title" />
+      <div class="overlay">
+        <div class="card-title">{{ newsletterItems[2].title }}</div>
+        <div class="card-desc">{{ newsletterItems[2].desc }}</div>
+      </div>
+    </div>
+    <div class="card portrait">
+      <img [src]="newsletterItems[3].image" [alt]="newsletterItems[3].title" />
+      <div class="overlay">
+        <div class="card-title">{{ newsletterItems[3].title }}</div>
+        <div class="card-desc">{{ newsletterItems[3].desc }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
