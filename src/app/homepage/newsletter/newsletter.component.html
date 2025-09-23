@@ -35,7 +35,7 @@
  -->
 
 
-
+<!--
  <div class="news-events-section">
   <h2 class="section-title">News and Events</h2>
   <div class="perfect-grid">
@@ -69,4 +69,23 @@
     </div>
   </div>
 </div>
+ -->
 
+<section class="programs">
+  <h2 class="programs-heading">Programslipp:</h2>
+
+  <div class="programs-grid">
+    <div
+      class="program-card"
+      *ngFor="let program of programs; let i = index"
+      [style.background-image]="'url(' + program.image + ')'"
+      [ngClass]="'card-' + (i + 1)"
+    >
+      <div class="overlay">
+        <h3 class="program-title">{{ program.title }}</h3>
+        <p class="program-subtitle">{{ program.subtitle }}</p>
+        <span class="arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>

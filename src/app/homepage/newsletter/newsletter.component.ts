@@ -11,26 +11,49 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './newsletter.component.css',
 })
 export class NewsletterComponent {
-  newsletterItems = [
+  // newsletterItems = [
+  //   {
+  //     title: 'img',
+  //     desc: 'img',
+  //     image: 'assets/bannerimage/entrepre-1.jpeg'
+  //   },
+  //   {
+  //     title: 'img',
+  //     desc: 'img',
+  //     image: 'assets/bannerimage/entrepre-1.jpeg'
+  //   },
+  //   {
+  //     title: 'img',
+  //     desc: 'img',
+  //     image: 'assets/bannerimage/entrepre-1.jpeg'
+  //   },
+  //   {
+  //     title: 'img',
+  //     desc: 'img',
+  //     image: 'assets/bannerimage/entrepre-1.jpeg'
+  //   },
+  // ];
+  programs = [
     {
-      title: 'img',
-      desc: 'img',
+      title: 'Hagenkvartetten',
+      subtitle: 'Siste kveld med gjengen.',
       image: 'assets/bannerimage/entrepre-1.jpeg'
     },
     {
-      title: 'img',
-      desc: 'img',
+      title: 'Ssens Trio',
+      subtitle: 'Kammermusikk i mange lag.',
       image: 'assets/bannerimage/entrepre-1.jpeg'
     },
     {
-      title: 'img',
-      desc: 'img',
+      title: 'Lise Davidsen',
+      subtitle: 'Sjelgransking med Schubert.',
       image: 'assets/bannerimage/entrepre-1.jpeg'
     },
     {
-      title: 'img',
-      desc: 'img',
-      image: 'assets/bannerimage/entrepre-1.jpeg'
-    },
+      title: 'Esa-Pekka Salonen & Bergen Filharmoniske Orkester',
+      subtitle: 'Turengalla – et moderne mesterverk om gleden og kjærligheten.',
+      image:'assets/bannerimage/entrepre-1.jpeg'
+    }
   ];
+
 }
