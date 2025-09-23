@@ -581,10 +581,10 @@ newsletter */
   min-height: 100px;
   margin-bottom: 40px; /* gap between items */
 }
-
+/* 
 .timeline-dot {
   position: absolute;
-  right: 11px; /* aligns with line */
+  right: 11px;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
@@ -593,8 +593,8 @@ newsletter */
   border-radius: 50%;
   border: 2px solid #fff;
   box-shadow: 0 2px 8px rgba(32,64,128,0.15);
-  z-index: 2; /* ensure dot stays above line */
-}
+  z-index: 2;
+} */
 
 .news-details {
   flex: 1;
