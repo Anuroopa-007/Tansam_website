@@ -3,18 +3,19 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { EmailService } from '../services/api.service';
+import { NewsLetterComponent } from "../news-letter/news-letter";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, NewsLetterComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
   isSent = false;
   contactForm: FormGroup;
-  
+
   constructor(
     private fb: FormBuilder,
     private emailService: EmailService,

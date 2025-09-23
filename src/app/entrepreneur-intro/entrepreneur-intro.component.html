@@ -1,13 +1,29 @@
-<div class="title">
-  <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-    Entrepreneurship Development
-  </h3>
-</div>
+<div class="entrepreneur-row">
+  <!-- Latest News Timeline -->
+  <aside class="latest-news-timeline">
+    <h2 class="news-heading">Latest News</h2>
+    <div class="news-list timeline">
+      <div class="timeline-item" *ngFor="let news of newsList">
+        <div class="news-details">
+          <h4 class="news-title">{{ news.title }}</h4>
+          <div class="news-date">
+            <span class="calendar-icon"></span>
+            <span class="date-text">{{ news.date }}</span>
+          </div>
+        </div>
+        <img class="news-img" [src]="news.image" [alt]="news.title" />
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+    </div>
+  </aside>
 
-<div class="entrepreneur-newsletter-container">
-  <!-- Left: Entrepreneurship Content -->
-  <div class="entrepreneurship-content">
-    <section class="highlight-section" data-aos="zoom-in">
+  <!-- Entrepreneurship Development (Right Column) -->
+  <main class="entrepreneurship-content">
+    <div class="title">
+      <h3>Entrepreneurship Development</h3>
+    </div>
+    <section class="highlight-section">
       <h4 class="section-heading">Our Vision</h4>
       <p>
         At <strong>TANSAM</strong>, we believe that innovation thrives where
@@ -18,7 +34,7 @@
       </p>
     </section>
 
-    <section class="highlight-section" data-aos="zoom-in">
+    <section class="highlight-section">
       <h4 class="section-heading">Support for Startups & Innovators</h4>
       <p>
         Whether you're shaping the next breakthrough in manufacturing or scaling
@@ -28,7 +44,7 @@
       </p>
     </section>
 
-    <section class="highlight-section" data-aos="zoom-in">
+    <section class="highlight-section">
       <h4 class="section-heading">
         Ready to Begin Your Entrepreneurial Journey?
       </h4>
@@ -36,7 +52,7 @@
         Explore our curated programs and events designed to equip you with the
         skills, networks, and inspiration to succeed.
       </p>
-      <div class="more-info-wrapper" data-aos="fade-up">
+      <div class="more-info-wrapper">
         <button class="cta" (click)="showMoreNews()">
           <span>More Info</span>
           <svg width="10px" height="10px" viewBox="0 0 13 10">
@@ -46,25 +62,5 @@
         </button>
       </div>
     </section>
-  </div>
-
-  <!-- Right: Newsletter -->
-  <!-- <div class="newsletter-container">
-    <div class="newsletter-content">
-      <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
-      <p class="newsletter-text">
-        Stay updated with the latest news, events, and Entrepreneurship
-        Development!
-      </p>
-
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit" class="subscribe-btn">Subscribe</button>
-      </form>
-    </div>
-
-    <div class="newsletter-image">
-      <img src="assets/headerimage/newsletter.png" alt="Newsletter Illustration" />
-    </div>
-  </div>
-</div> -->
+  </main>
+</div>
