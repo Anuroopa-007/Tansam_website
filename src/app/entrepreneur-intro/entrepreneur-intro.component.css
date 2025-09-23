@@ -530,133 +530,132 @@ newsletter */
 /* updates */
 
 
+ .entrepreneur-row {
+  display: flex;
+  align-items: center; /* center timeline with entrepreneurship content */
+  gap: 48px;
+  max-width: 1200px;
+  margin: 36px auto 0 auto;
+  background: transparent;
+}
+
+.latest-news-timeline {
+  flex: 0 0 370px;
+  padding: 0;
+  background: none;
+  position: relative;
+  margin-left: 32px; /* shifts the column */
+}
+
+.news-heading {
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: #145ba7;
+  margin-bottom: 24px;
+  font-family: 'Rubik', sans-serif;
+  text-align: left;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  padding-right: 50px; /* space for line and dots */
+}
+
+/* Continuous vertical line */
+.timeline-line {
+  position: absolute;
+  right: 18px; /* aligns with dots */
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #145ba7;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  margin-bottom: 40px; /* gap between items */
+}
+
+.timeline-dot {
+  position: absolute;
+  right: 11px; /* aligns with line */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: #2366c5;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(32,64,128,0.15);
+  z-index: 2; /* ensure dot stays above line */
+}
+
+.news-details {
+  flex: 1;
+  margin-left: 18px;
+}
+
+.news-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #094d91;
+}
+
+.news-date {
+  font-size: 0.97rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.calendar-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.news-img {
+  width: 100px;  /* larger image */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d6e3f8;
+  margin-left: 18px;
+  margin-right: 0;
+  cursor: pointer;
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(32,64,128,0.10);
+}
+
+.news-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(32,64,128,0.18);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
   .entrepreneur-row {
-    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 48px;
-    max-width: 1200px;
-    margin: 36px auto 0 auto;
-    background: transparent;
+    gap: 28px;
   }
-
   .latest-news-timeline {
-    flex: 0 0 370px;
-    padding: 0;
-    background: none;
-    position: relative;
-    margin-left: 32px;      /* <-- This shifts the full column to the right */
+    max-width: 100%;
+    margin-bottom: 30px;
   }
-
-
-  .news-heading {
-    font-size: 1.38rem;
-    font-weight: 700;
-    color: #145ba7;
-    margin-bottom: 24px;
-    font-family: 'Rubik', sans-serif;
-    text-align: left;
-  }
-
-  .timeline {
-    position: relative;
+  .timeline-container {
     padding-right: 30px;
-    margin-top: 0;
-    background: none;
   }
-
-  .timeline-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-right: 32px;
-    min-height: 78px;
-    margin-bottom: 0; /* Remove margin bottom to eliminate gaps */
-  }
-
   .timeline-dot {
-    position: absolute;
     right: 8px;
-    top: 24px; /* Manually adjusted to align with line */
-    width: 15px;
-    height: 15px;
-    background: #2366c5;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 8px rgba(32,64,128,0.15);
-    z-index: 2;
-    animation: moveDot 2s infinite alternate cubic-bezier(.6,0,.4,1);
   }
-  @keyframes moveDot {
-    0% { top: 19px; }
-    100% { top: 29px; }
-  }
-
-  .timeline-line {
-    position: absolute;
-    right: 15px;
-    top: 0;
-    width: 3px;
-    height: 100%;
-    background: #145ba7;
-    z-index: 1;
-    opacity: 0.85;
-  }
-
-  .news-details {
-    flex: 1;
-    margin-left: 18px;
-  }
-
-  .news-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #094d91;
-  }
-
-  .news-date {
-    font-size: 0.97rem;
-    color: #888;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .calendar-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    margin-right: 3px;
-  }
-
-  .news-img {
-    width: 72px;              /* Make image larger */
-    height: 72px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #d6e3f8;
-    margin-left: 18px;
-    margin-right: 0;
-    cursor: pointer;          /* Show pointer on hover */
-    transition: transform 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
-    box-shadow: 0 2px 8px rgba(32,64,128,0.10);
-  }
-  .news-img:hover {
-    transform: scale(1.08);   /* Optional: subtle zoom effect on hover */
-    box-shadow: 0 6px 24px rgba(32,64,128,0.18);
-  }
-
-  @media (max-width: 991px) {
-    .entrepreneur-row {
-      flex-direction: column;
-      gap: 28px;
-    }
-    .latest-news-timeline {
-      max-width: 100%;
-      margin-bottom: 30px;
-    }
-    .timeline {
-      padding-right: 14px;
-    }
-  }
-
+}
