@@ -1,26 +1,4 @@
-<div class="entrepreneur-row">
-  <!-- Latest News Timeline -->
-  <aside class="latest-news-timeline">
-    <h2 class="news-heading">Latest News</h2>
 
-    <div class="timeline-container">
-      <!-- Vertical Line -->
-      <div class="timeline-line"></div>
-
-      <!-- Timeline Items -->
-      <div class="timeline-item" *ngFor="let news of newsList">
-        <div class="news-details">
-          <h4 class="news-title">{{ news.title }}</h4>
-          <div class="news-date">
-            <span class="calendar-icon"></span>
-            <span class="date-text">{{ news.date }}</span>
-          </div>
-        </div>
-        <img class="news-img" [src]="news.image" [alt]="news.title" />
-        <div class="timeline-dot"></div>
-      </div>
-    </div>
-  </aside>
 
   <!-- Entrepreneurship Development -->
   <main class="entrepreneurship-content">
@@ -62,4 +40,4 @@
       </div>
     </section>
   </main>
-</div>
+

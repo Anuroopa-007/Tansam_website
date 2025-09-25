@@ -186,10 +186,10 @@
   color: #f0db4f;
 }
 
-.nav-list .active > a,
+/* .nav-list .active > a,
 .nav-list .active > span {
   color: #f0db4f;
-}
+} */
 
 /* ================================
    Dropdowns (Hidden Initially)
