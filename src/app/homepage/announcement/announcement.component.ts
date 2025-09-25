@@ -44,56 +44,56 @@ export class AnnouncementComponent implements OnInit {
   constructor(private emailService: EmailService, private router: Router) {}
 
   ngOnInit(): void {
-    this.fetchWorkshopImages();
-    this.fetchEntrepreneurshipCourses();
+    // this.fetchWorkshopImages();
+    // this.fetchEntrepreneurshipCourses();
   }
 
-  fetchWorkshopImages() {
-    this.emailService.getWorkshopImages().subscribe(
-      (data) => {
-        this.announcements = data
-          .filter((item) => item.published)
-          .map((item) => ({
-            imageUrl: item.workshop_image.startsWith('http')
-              ? item.workshop_image
-              : 'http://127.0.0.1:8000' + item.workshop_image,
-            altText: 'Workshop Image',
-          }));
-      },
-      (error) => {
-        console.error('Failed to fetch workshop images:', error);
-      }
-    );
-  }
+  // fetchWorkshopImages() {
+  //   this.emailService.getWorkshopImages().subscribe(
+  //     (data) => {
+  //       this.announcements = data
+  //         .filter((item) => item.published)
+  //         .map((item) => ({
+  //           imageUrl: item.workshop_image.startsWith('http')
+  //             ? item.workshop_image
+  //             : 'http://127.0.0.1:8000' + item.workshop_image,
+  //           altText: 'Workshop Image',
+  //         }));
+  //     },
+  //     (error) => {
+  //       console.error('Failed to fetch workshop images:', error);
+  //     }
+  //   );
+  // }
 
-  fetchEntrepreneurshipCourses() {
-    this.emailService.getEntrepreneurshipCourses().subscribe(
-      (data) => {
-        this.courses = data
-          .filter((item) => item.published)
-          .map((item) => ({
-            title: item.course_title,
-            startDate: item.start_date,
-            time: `${item.from_time} - ${item.to_time}`,
-            imageUrl: item.course_image.startsWith('http')
-              ? item.course_image
-              : 'http://127.0.0.1:8000' + item.course_image,
-            labs: item.course_lab || 'N/A',
-            mode: item.mode || 'N/A',
-            contact_person: item.contact_person || 'N/A',
-            contact_mail: item.contact_mail || 'N/A',
-            id: item.id,
-          }))
-          .sort(
-            (a, b) =>
-              new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
-          );
-      },
-      (error) => {
-        console.error('Failed to fetch entrepreneurship courses:', error);
-      }
-    );
-  }
+  // fetchEntrepreneurshipCourses() {
+  //   this.emailService.getEntrepreneurshipCourses().subscribe(
+  //     (data) => {
+  //       this.courses = data
+  //         .filter((item) => item.published)
+  //         .map((item) => ({
+  //           title: item.course_title,
+  //           startDate: item.start_date,
+  //           time: `${item.from_time} - ${item.to_time}`,
+  //           imageUrl: item.course_image.startsWith('http')
+  //             ? item.course_image
+  //             : 'http://127.0.0.1:8000' + item.course_image,
+  //           labs: item.course_lab || 'N/A',
+  //           mode: item.mode || 'N/A',
+  //           contact_person: item.contact_person || 'N/A',
+  //           contact_mail: item.contact_mail || 'N/A',
+  //           id: item.id,
+  //         }))
+  //         .sort(
+  //           (a, b) =>
+  //             new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
+  //         );
+  //     },
+  //     (error) => {
+  //       console.error('Failed to fetch entrepreneurship courses:', error);
+  //     }
+  //   );
+  // }
   handleCourseSelection(course: Course) {
     const formattedTitle = course.title.replace(/ /g, '_'); // Replace spaces with _
     this.router.navigate(['courseregister', formattedTitle], {

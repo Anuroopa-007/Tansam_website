@@ -76,33 +76,33 @@ export class JobdetailsComponent {
       formDataToSend.append('resume', this.formData.resume);
       formDataToSend.append('job', this.job.id.toString());
 
-      this.emailService.submitJobApplication(formDataToSend).subscribe({
-        next: () => {
-          alert('Application submitted successfully!');
-          this.isSubmitting = false;
-          this.closeModal();
+      // this.emailService.submitJobApplication(formDataToSend).subscribe({
+      //   next: () => {
+      //     alert('Application submitted successfully!');
+      //     this.isSubmitting = false;
+      //     this.closeModal();
 
-          // Reset form
-          form.resetForm();
-          this.formData = {
-            job: '',
-            full_name: '',
-            contact: '',
-            email: '',
-            resume: null,
-          };
+      //     // Reset form
+      //     form.resetForm();
+      //     this.formData = {
+      //       job: '',
+      //       full_name: '',
+      //       contact: '',
+      //       email: '',
+      //       resume: null,
+      //     };
 
-          // Clear file input manually
-          if (this.fileInputRef) {
-            this.fileInputRef.nativeElement.value = '';
-          }
-        },
-        error: (err) => {
-          alert('Failed to submit application. Please try again.');
-          console.error(err);
-          this.isSubmitting = false;
-        },
-      });
+      //     // Clear file input manually
+      //     if (this.fileInputRef) {
+      //       this.fileInputRef.nativeElement.value = '';
+      //     }
+      //   },
+      //   error: (err) => {
+      //     alert('Failed to submit application. Please try again.');
+      //     console.error(err);
+      //     this.isSubmitting = false;
+      //   },
+      // });
     } else {
       alert('Please complete all required fields with valid data.');
     }

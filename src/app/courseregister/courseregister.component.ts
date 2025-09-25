@@ -130,17 +130,17 @@ export class CourseregisterComponent implements OnInit {
         course: this.course?.id || null,
       };
 
-      this.emailService.registerForCourse(registrationData).subscribe({
-        next: (response) => {
-          alert('✅ Registration successful!');
-          this.closeModal();
-          form.resetForm();
-        },
-        error: (err) => {
-          console.error('❌ Registration failed:', err);
-          alert('Something went wrong. Please try again.');
-        },
-      });
+      // this.emailService.registerForCourse(registrationData).subscribe({
+      //   next: (response) => {
+      //     alert('✅ Registration successful!');
+      //     this.closeModal();
+      //     form.resetForm();
+      //   },
+      //   error: (err) => {
+      //     console.error('❌ Registration failed:', err);
+      //     alert('Something went wrong. Please try again.');
+      //   },
+      // });
     }
   }
 

@@ -2,7 +2,7 @@
   import { ActivatedRoute } from '@angular/router';
   import { HttpClient } from '@angular/common/http';
   import { CommonModule } from '@angular/common';
-  import { EmailService, RawNewsItem } from '../services/api.service';
+  import { EmailService } from '../services/api.service';
 
   interface NewsItem {
     title: string;
@@ -40,21 +40,21 @@
         }
       });
 
-      this.emailService.getLatestNews().subscribe({
-        next: (data: RawNewsItem[]) => {
-          this.latestNews = data
-            .map((news) => ({
-              title: news.title,
-              image: news.news_image,  
-              date: this.parseDate(news.date),
-              description: news.description,
-            }))
-            .sort((a, b) => b.date.getTime() - a.date.getTime());
-        },
-        error: (err) => {
-          console.error('Failed to fetch latest news:', err);
-        },
-      });
+      // this.emailService.getLatestNews().subscribe({
+      //   next: (data: RawNewsItem[]) => {
+      //     this.latestNews = data
+      //       .map((news) => ({
+      //         title: news.title,
+      //         image: news.news_image,
+      //         date: this.parseDate(news.date),
+      //         description: news.description,
+      //       }))
+      //       .sort((a, b) => b.date.getTime() - a.date.getTime());
+      //   },
+      //   error: (err) => {
+      //     console.error('Failed to fetch latest news:', err);
+      //   },
+      // });
     }
 
 parseDate(date: string | Date): Date {

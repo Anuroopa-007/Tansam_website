@@ -9,7 +9,6 @@ import { FacultyComponent } from './faculty/faculty.component';
 import { BrochureComponent } from './brochure/brochure.component';
 import { ContactComponent } from './contact/contact.component';
 import { GciComponent } from './gci/gci.component';
-import { EventsComponent } from './events/events.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { LinkedinComponent } from './linkedin/linkedin.component';
 import { NewspaperComponent } from './newspaper/newspaper.component';
@@ -51,7 +50,6 @@ export const routes: Routes = [
   { path: 'Digital-Transformation', component: BrochureComponent },
   { path: 'contact_us', component: ContactComponent },
   { path: 'GCC', component: GciComponent },
-  { path: 'events', component: EventsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'media/:id', component: NewspaperComponent },
   { path: 'TANSAM/LinkedIN', component: LinkedinComponent },
@@ -79,7 +77,7 @@ export const routes: Routes = [
   { path: 'lab/Smart_Factory_Center', component: SFCComponent },
   { path: 'lab/Research_Centre_For_PLM', component: PLMComponent },
   { path: 'lab/Research_Centre_For_Asset_Performance', component: RCFAPComponent },
-  {path:'deep-drive',component:DeepDriveComponent},
+  { path:'deep-drive',component:DeepDriveComponent},
   { path: 'lab/Product_Innovation_Center', component: PICComponent },
   {path:'ai',component:ArtificialIntelligence},
   {path:'skilling',component:SkillingProgram},

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
-import { EmailService, RawMediaItem } from '../services/api.service';
+import { EmailService } from '../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +11,7 @@ import { EmailService, RawMediaItem } from '../services/api.service';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent implements OnInit {
-  mediaItems: RawMediaItem[] = [];
+  // mediaItems: RawMediaItem[] = [];
   labs: any[] = [];
   isMenuOpen = false;
   isDropdownOpen: { [key: string]: boolean } = {};
@@ -20,14 +20,14 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private apiService: EmailService) {}
 
   ngOnInit() {
-    this.apiService.getMediaCategories().subscribe({
-      next: (data) => {
-        this.mediaItems = data;
-      },
-      error: (err) => {
-        console.error('Failed to load media categories', err);
-      },
-    });
+    // this.apiService.getMediaCategories().subscribe({
+    //   next: (data) => {
+    //     this.mediaItems = data;
+    //   },
+    //   error: (error) => {
+    //     console.error('Failed to load media categories', err);
+    //   },
+    // });
   }
 
   toggleDropdown(dropdown: string) {
