@@ -67,4 +67,6 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop;
     this.isScrolled = scrollPosition > 200;
   }
+
+  
 }
