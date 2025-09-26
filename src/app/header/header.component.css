@@ -57,6 +57,11 @@
   color: #f0db4f;
 }
 
+.active-link {
+  color: #f0db4f; /* stays yellow when active */
+  font-weight: bold; /* optional */
+}
+
 /* ================================
    Logo Section with Background
 ================================= */
@@ -185,6 +190,11 @@
 .nav-list span:hover {
   color: #f0db4f;
 }
+.nav-list li.active-link a {
+  color: #f0db4f !important;
+  font-weight: bold;
+}
+
 
 /* .nav-list .active > a,
 .nav-list .active > span {
@@ -271,7 +281,7 @@
     padding: 20px 40px;
   }
   .navbar {
-    padding: 20px 50px;
+    padding: 10px 40px;
   }
 }
 
@@ -307,7 +317,7 @@
     display: block;
   }
 
-  /* .logosection {
+  .logosection {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
@@ -329,7 +339,7 @@
   .logo-right {
     order: 1;
     gap: 10px;
-  } */
+  }
 }
 
 /*
@@ -423,28 +433,11 @@ notification */
 
 @media (max-width: 768px) {
   .logosection {
-    display: flex;
     flex-direction: column;   /* stack vertically */
     align-items: center;
-    justify-content: flex-start; /* align items to top */
+    justify-content: center;
     padding: 15px;
     gap: 15px;
-
-    max-height: 70vh;   /* limit visible height */
-    overflow-y: auto;   /* enable vertical scroll */
-    scroll-behavior: smooth;
-  }
-
-  /* Optional: custom scrollbar */
-  .logosection::-webkit-scrollbar {
-    width: 6px;
-  }
-  .logosection::-webkit-scrollbar-thumb {
-    background: #00569a;
-    border-radius: 10px;
-  }
-  .logosection::-webkit-scrollbar-track {
-    background: #e0e0e0;
   }
 
   .logo-left,
@@ -485,35 +478,21 @@ notification */
   .logo-left img[alt="Siemens Logo"] {
     height: 20px;
   }
-.nav-list {
-  display: none;
-  flex-direction: column;
-  background: #00569a;
-  position: absolute;
-  top: 36px;
-  left: 0;
-  width: 100%;       /* full width for mobile */
-  max-height: 80vh;  /* limit height */
-  overflow-y: auto;  /* allow vertical scrolling */
-  padding: 15px 0;
-  border-radius: 0 5px 5px 0;
-}
-
-/* Optional: add smooth scrolling effect */
-.nav-list::-webkit-scrollbar {
-  width: 6px;
-}
-
-.nav-list::-webkit-scrollbar-thumb {
-  background: #f0db4f;
-  border-radius: 10px;
-}
-
-.nav-list::-webkit-scrollbar-track {
-  background: #004070;
-}
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #00569a;
+    position: absolute;
+    top: 60px;
+    left: 0;   /* 👈 now opens from left */
+    width: 220px;
+    padding: 15px 0;
+    border-radius: 0 5px 5px 0; /* adjust rounded corners */
+  }
 
   .nav-list.active {
     display: flex;
   }
 }
+
+

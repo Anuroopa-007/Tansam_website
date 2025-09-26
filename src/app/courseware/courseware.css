@@ -127,7 +127,7 @@
 }
 
 .benefits-row {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,15 +135,23 @@
 }
 
 .benefit {
-  background: #444;
+  background: #00569a;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
 }
+.benefits-card {
+  background: #eaf1fb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
 
 .benefit.highlight {
-  background: #e67e22; /* Orange highlight */
+  background:#00569a; /* Orange highlight */
 }
 
 /* Responsive */

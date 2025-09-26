@@ -23,8 +23,15 @@
         "/assets/bannerimage/jsw1.png",
         "/assets/bannerimage/ltts.png"
       ],
-      "content": "Collaboration with RNAIPL to nurture innovation. Deployment of 3 Engineers from TANSAM at RNAIPL Oragadam Manufacturing unit for POCs and POVs Strategic Partnership with Caterpillar for Upskilling in Industry 4.0 for employees and consulting of Industry Problems Collaboration with Flex India on CSR initiative for capacity building of manpower in Electronics Manufacturing and Repair Job Role TANSAM collaborated with JSW for technology enablement through solution and training of employees TANSAM collaborated with LTTS for manpower sourcing support on advance manufacturing and digital twin technologies."
-    },
+      "content": [
+        "Collaboration with RNAIPL to nurture innovation. Deployment of 3 Engineers from TANSAM at RNAIPL Oragadam Manufacturing unit for POCs and POVs",
+        "Strategic Partnership with Caterpillar for Upskilling in Industry 4.0 for employees and consulting of Industry Problems",
+        "Collaboration with Flex India on CSR initiative for capacity building of manpower in Electronics Manufacturing and Repair Job Role",
+        "TANSAM collaborated with JSW for technology enablement through solution and training of employees",
+        "TANSAM collaborated with LTTS for manpower sourcing support on advance manufacturing and digital twin technologies"
+      ]
+    }
+    ,
     {
       "id": "Our Strength",
       "title": "OUR STRENGTH",
