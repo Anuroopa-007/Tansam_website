@@ -134,3 +134,113 @@
     flex-direction: column;
   }
 }
+/* case study */
+
+/* White Box Style */
+.lab-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Row Layout (image + text side by side) */
+.row-layout {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Images */
+.lab-box img {
+  width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Text Area */
+.lab-text {
+  flex: 1;
+}
+
+.lab-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #00569a;
+  font-weight: 600;
+}
+
+.lab-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.lab-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lab-text li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.lab-text li::before {
+  content: "✔";
+  color: #00569a;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Read more button */
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #00569a;
+  cursor: pointer;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+/* First box image full width */
+.lab-box:first-of-type img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Case Study center heading */
+.lab-box:last-of-type .lab-text h2 {
+  text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row-layout {
+    flex-direction: column;
+  }
+
+  .lab-box img {
+    width: 100%;
+  }
+
+  .lab-box.row-layout .lab-text {
+    margin-top: 1rem;
+  }
+}
