@@ -7,7 +7,7 @@ import { DOCUMENT } from '@angular/common';  // or '@angular/platform-browser'
 @Component({
   selector: 'app-artificialintelligence',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],   // ✅ add FontAwesomeModule here
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './artificialintelligence.html',
   styleUrls: ['./artificialintelligence.css']
 })

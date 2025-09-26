@@ -133,113 +133,99 @@ body {
 
 .ai-flow-vertical {
   position: relative;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 800px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 900px;
 }
 
 .flow-step {
-  position: sticky;
-  margin: 40px 0;
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin: 60px 0;
 }
 
+/* Timeline line */
 .line {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 3px;
+  width: 4px;
   height: 100%;
-  background: #e5e7eb; /* gray-200 */
+  background: linear-gradient(to bottom, #2563eb, #3b82f6);
   transform: translateX(-50%);
+  border-radius: 2px;
   z-index: 0;
 }
 
+/* Timeline circle with gradient and hover effect */
 .circle {
   position: relative;
   z-index: 2;
-  background: #00569A; /* blue */
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
   color: #fff;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  font-size: 20px;
-  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
-}
-
-.content {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 16px 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  width: 42%;
-  position: relative;
-  z-index: 1;
-
-  /* Animation */
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s forwards;
-  animation-delay: 0.01s; /* optional stagger delay */
-
-    /* Hover zoom transition */
+  font-size: 22px;
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
+.circle:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.5);
+}
+
+/* Step card */
+.content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  width: 45%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Hover effect on card */
 .content:hover {
-  transform: scale(1.56);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* optional deeper shadow */
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #e0f2fe, #dbeafe);
 }
 
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Optional: stagger animation for multiple steps */
-.flow-step:nth-child(1) .content { animation-delay: 0.1s; }
-.flow-step:nth-child(2) .content { animation-delay: 0.3s; }
-.flow-step:nth-child(3) .content { animation-delay: 0.5s; }
-.flow-step:nth-child(4) .content { animation-delay: 0.7s; }
-
-
+/* Left and right positioning */
 .content.left {
   margin-right: auto;
   text-align: right;
-  border-left: 4px solid #00569A;
 }
 
 .content.right {
   margin-left: auto;
   text-align: left;
-  border-right: 4px solid #00569A;
 }
 
+/* Step title and description */
 .title {
-  margin: 0 0 6px 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #3b5181;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1e3a8a;
 }
 
 .desc {
-  margin: 0;
-  padding: 0;
-  list-style: none; /* remove bullets */
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #374151;
-  padding-left: 0; /* optional: remove extra indentation */
+  line-height: 1.6;
 }
 
+/* Tool badges */
 .tools {
   margin-top: 12px;
   display: flex;
@@ -248,21 +234,21 @@ body {
 }
 
 .tool-badge {
-  background-color: #cfd9ee; /* blue pill */
-  color: #3d3b3b;
-  padding: 4px 10px;
-  border-radius: 20px;
+  background-color: #e0f2fe;
+  color: #1e3a8a;
+  padding: 6px 12px;
+  border-radius: 999px;
   font-size: 0.8rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .tool-badge:hover {
-  background-color: #97acf391; /* darker on hover */
+  background-color: #bae6fd;
+  cursor: pointer;
 }
 
-
-/* --- Responsive (stacked) --- */
+/* Responsive (stacked timeline) */
 @media (max-width: 768px) {
   .line {
     left: 24px;
@@ -274,7 +260,5 @@ body {
     width: calc(100% - 70px);
     margin-left: 70px;
     text-align: left !important;
-    border-left: 4px solid #00569A;
-    border-right: none;
   }
 }
