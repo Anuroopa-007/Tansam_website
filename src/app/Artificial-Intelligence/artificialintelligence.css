@@ -152,7 +152,7 @@ body {
   left: 50%;
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, #2563eb, #3b82f6);
+  background: linear-gradient(to bottom, #009999, #86c9c9);
   transform: translateX(-50%);
   border-radius: 2px;
   z-index: 0;
