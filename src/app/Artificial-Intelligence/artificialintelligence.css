@@ -133,9 +133,9 @@ body {
 
 .ai-flow-vertical {
   position: relative;
-  margin: 50px auto;
+  margin: 10px auto;
   width: 90%;
-  max-width: 900px;
+  max-width: 800px;
 }
 
 .flow-step {
@@ -162,7 +162,7 @@ body {
 .circle {
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  background: linear-gradient(135deg, #009999, #86c9c9);
   color: #fff;
   border-radius: 50%;
   width: 50px;
@@ -172,13 +172,13 @@ body {
   justify-content: center;
   margin: 0 auto;
   font-size: 22px;
-  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 6px 15px rgba(153, 153, 0, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .circle:hover {
   transform: scale(1.2);
-  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 12px 25px rgba(153, 153, 0, 0.35);
 }
 
 /* Step card */
