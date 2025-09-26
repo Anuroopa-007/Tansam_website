@@ -28,8 +28,7 @@
     {
       "id": "Our Strength",
       "title": "OUR STRENGTH",
-      "chartImage": "/assets/images/skill-spectrum.png",
-      "wordCloudImage": "/assets/images/wordcloud-trophy.png",
+      "chartImage": "/assets/bannerimage/our-strength.png",
       "experience": "375",
       "skillsCount": "67",
       "courses": [

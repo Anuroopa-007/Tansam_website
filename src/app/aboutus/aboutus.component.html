@@ -28,25 +28,31 @@
             </div>
 
             <!-- Right: Word Cloud + Stats -->
+           <!-- Right: Stats Styled Box -->
             <div class="stats-box">
-              <img [src]="tabItem.wordCloudImage" alt="Word Cloud Trophy" />
-              <div class="experience">
-                Man Years of Experience: ~{{ tabItem.experience }}
-              </div>
-              <div class="skills">
-                Total # of Unique Skills: {{ tabItem.skillsCount }}
-              </div>
+           <div class="stat-item experience">
+          <strong>Man Years of Experience:</strong> ~{{ tabItem.experience }}
             </div>
+  <div class="stat-item skills">
+    <strong>Total # of Unique Skills:</strong> {{ tabItem.skillsCount }}
+  </div>
+</div>
+
           </div>
 
           <!-- Courses -->
-          <div class="courses-grid">
-            <div *ngFor="let group of tabItem.courses" class="course-group">
-              <ul>
-                <li *ngFor="let course of group">{{ course }}</li>
-              </ul>
-            </div>
-          </div>
+    <!-- Cards with arrow list -->
+        <div class="courses-grid">
+        <div *ngFor="let group of tabItem.courses" class="course-card">
+        <ul>
+            <li *ngFor="let course of group">
+             {{ course }}
+            </li>
+
+        </ul>
+        </div>
+     </div>
+
         </div>
 
         <!-- Default layout for other tabs -->
