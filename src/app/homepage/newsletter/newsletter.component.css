@@ -90,3 +90,75 @@
     grid-row: auto !important;
   }
 }
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+  color: #00569a;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #00579ade;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fd0000;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover effect */
+.close-btn:hover {
+  background-color: #c70000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}

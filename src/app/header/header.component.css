@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background: url("/assets/headerimage/header_background.png") no-repeat center center; 
+  background: url("/assets/headerimage/header_background.png") no-repeat center center;
   background-size: cover;
   gap: 20px;
   flex-wrap: nowrap;
@@ -190,6 +190,11 @@
 .nav-list span:hover {
   color: #f0db4f;
 }
+.nav-list li.active-link a {
+  color: #f0db4f !important;
+  font-weight: bold;
+}
+
 
 /* .nav-list .active > a,
 .nav-list .active > span {
@@ -489,3 +494,5 @@ notification */
     display: flex;
   }
 }
+
+

@@ -1,59 +1,44 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
-
 @Component({
   selector: 'app-newsletter',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [CommonModule],
   templateUrl: './newsletter.component.html',
   styleUrl: './newsletter.component.css',
 })
 export class NewsletterComponent {
-  // newsletterItems = [
-  //   {
-  //     title: 'img',
-  //     desc: 'img',
-  //     image: 'assets/bannerimage/entrepre-1.jpeg'
-  //   },
-  //   {
-  //     title: 'img',
-  //     desc: 'img',
-  //     image: 'assets/bannerimage/entrepre-1.jpeg'
-  //   },
-  //   {
-  //     title: 'img',
-  //     desc: 'img',
-  //     image: 'assets/bannerimage/entrepre-1.jpeg'
-  //   },
-  //   {
-  //     title: 'img',
-  //     desc: 'img',
-  //     image: 'assets/bannerimage/entrepre-1.jpeg'
-  //   },
-  // ];
   programs = [
     {
-      title: 'Hagenkvartetten',
-      subtitle: 'Siste kveld med gjengen.',
-      image: 'assets/bannerimage/entrepre-1.jpeg'
+      title: "HACKATHON",
+      subtitle: "TANSAM's 2'nd Hackathon at Vivekananda College of Engineering for Women at Tiruchengode",
+      image: 'assets/mainimage/papercut-1.jpeg'
     },
     {
-      title: 'Ssens Trio',
-      subtitle: 'Kammermusikk i mange lag.',
-      image: 'assets/bannerimage/entrepre-1.jpeg'
+      title: "TANSAM's 1'st HACKATHON",
+      subtitle: 'JOY UNIVERSITY',
+      image: 'assets/bannerimage/hackathon-1.jpeg'
     },
     {
-      title: 'Lise Davidsen',
-      subtitle: 'Sjelgransking med Schubert.',
-      image: 'assets/bannerimage/entrepre-1.jpeg'
+      title: 'INTERNSHIP Valedictory Function',
+      subtitle: 'Panimalar Engineering College',
+      image: 'assets/mainimage/panimalar-hackathon.jpeg'
     },
     {
-      title: 'Esa-Pekka Salonen & Bergen Filharmoniske Orkester',
-      subtitle: 'Turengalla – et moderne mesterverk om gleden og kjærligheten.',
-      image:'assets/bannerimage/entrepre-1.jpeg'
+      title: 'HACKATHON',
+      subtitle: "TANSAM's 3rd Hackathon at Excel Engineering College at Komarapalayam",
+      image: 'assets/mainimage/pqpercut-2.jpeg'
     }
   ];
 
+  selectedProgram: any = null;
+
+  openModal(program: any) {
+    this.selectedProgram = program;
+  }
+
+  closeModal() {
+    this.selectedProgram = null;
+  }
 }

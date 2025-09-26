@@ -1,112 +1,28 @@
-<!-- <div class="newsletter-container">
-  <div class="newsletter-content">
-    <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
-    <p class="newsletter-text">
-      Stay updated with the latest news, events, and Entrepreneurship
-      Development!
-    </p>
-
-    <form class="newsletter-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit" class="subscribe-btn">Subscribe</button>
-    </form>
-  </div>
-
-  <div class="newsletter-image">
-    <img
-      src="assets/headerimage/newsletter.png"
-      alt="Newsletter Illustration"
-    />
-  </div>
-</div> -->
-
-<!--
-<div class="newsletter-grid">
-  <div class="newsletter-card" *ngFor="let item of newsletterItems">
-    <img [src]="item.image" [alt]="item.title" class="newsletter-img" />
-    <div class="newsletter-overlay">
-      <h2 class="newsletter-title">{{ item.title }}</h2>
-      <p class="newsletter-desc">{{ item.desc }}</p>
-      <span class="newsletter-arrow">&rarr;</span>
-    </div>
-  </div>
-</div>
-
- -->
-
-
-<!--
- <div class="news-events-section">
-  <h2 class="section-title">News and Events</h2>
-  <div class="perfect-grid">
-    <div class="card portrait">
-      <img [src]="newsletterItems[0].image" [alt]="newsletterItems[0].title" />
-      <div class="overlay">
-        <div class="card-title">{{ newsletterItems[0].title }}</div>
-        <div class="card-desc">{{ newsletterItems[0].desc }}</div>
-      </div>
-    </div>
-    <div class="card landscape">
-      <img [src]="newsletterItems[1].image" [alt]="newsletterItems[1].title" />
-      <div class="overlay">
-        <div class="card-title">{{ newsletterItems[1].title }}</div>
-        <div class="card-desc">{{ newsletterItems[1].desc }}</div>
-      </div>
-    </div>
-    <div class="card landscape">
-      <img [src]="newsletterItems[2].image" [alt]="newsletterItems[2].title" />
-      <div class="overlay">
-        <div class="card-title">{{ newsletterItems[2].title }}</div>
-        <div class="card-desc">{{ newsletterItems[2].desc }}</div>
-      </div>
-    </div>
-    <div class="card portrait">
-      <img [src]="newsletterItems[3].image" [alt]="newsletterItems[3].title" />
-      <div class="overlay">
-        <div class="card-title">{{ newsletterItems[3].title }}</div>
-        <div class="card-desc">{{ newsletterItems[3].desc }}</div>
-      </div>
-    </div>
-  </div>
-</div>
- -->
-
 <section class="programs">
-  <h2 class="programs-heading">News and Events </h2>
+  <h2 class="programs-heading">News and Events</h2>
 
   <div class="programs-grid">
-    <!-- Row 1: 30% | 70% -->
-    <div class="program-card card-1" style="background-image: url('assets/mainimage/papercut-1.jpeg');">
+    <div
+      *ngFor="let program of programs; let i = index"
+      class="program-card card-{{i+1}}"
+      [style.backgroundImage]="'url(' + program.image + ')'"
+      (click)="openModal(program)"
+    >
       <div class="overlay">
-        <h3 class="program-title">HACKATHON</h3>
-        <p class="program-subtitle">TANSAM's 2'nd Hackathon at Vivekananda College of Engineering for Women at Tiruchengode</p>
-        <span class="arrow">→</span>
-      </div>
-    </div>
-
-    <div class="program-card card-2" style="background-image: url('assets/bannerimage/hackathon-1.jpeg');">
-      <div class="overlay">
-        <h3 class="program-title">TANSAM's 1'st HACKATHON</h3>
-        <p class="program-subtitle">JOY UNIVERSITY</p>
-        <span class="arrow">→</span>
-      </div>
-    </div>
-
-    <!-- Row 2: 70% | 30% -->
-    <div class="program-card card-3" style="background-image: url('assets/mainimage/panimalar-hackathon.jpeg');">
-      <div class="overlay">
-        <h3 class="program-title">INTERNSHIP Validaictory Function</h3>
-        <p class="program-subtitle">Panimalar Engineering College</p>
-        <span class="arrow">→</span>
-      </div>
-    </div>
-
-    <div class="program-card card-4" style="background-image: url('assets/mainimage/pqpercut-2.jpeg');">
-      <div class="overlay">
-        <h3 class="program-title">HACKATHON</h3>
-        <p class="program-subtitle">TANSAM's 3rd Hackathon at Excel Engineering College at Komarapalayam</p>
+        <h3 class="program-title">{{ program.title }}</h3>
+        <p class="program-subtitle">{{ program.subtitle }}</p>
         <span class="arrow">→</span>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal-backdrop" *ngIf="selectedProgram" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close-btn" (click)="closeModal()">×</span>
+    <img [src]="selectedProgram.image" [alt]="selectedProgram.title" />
+    <h3>{{ selectedProgram.title }}</h3>
+    <p>{{ selectedProgram.subtitle }}</p>
+  </div>
+</div>

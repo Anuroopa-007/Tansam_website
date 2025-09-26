@@ -29,19 +29,18 @@
 
             <!-- Right: Word Cloud + Stats -->
             <div class="stats-box">
-              <img [src]="tabItem.wordCloudImage" alt="Word Cloud Trophy" />
-              <div class="experience">
-                Man Years of Experience: ~{{ tabItem.experience }}
+              <div class="stat-item experience">
+                <strong>Man Years of Experience:</strong> ~{{ tabItem.experience }}
               </div>
-              <div class="skills">
-                Total # of Unique Skills: {{ tabItem.skillsCount }}
+              <div class="stat-item skills">
+                <strong>Total # of Unique Skills:</strong> {{ tabItem.skillsCount }}
               </div>
             </div>
           </div>
 
-          <!-- Courses -->
+          <!-- Courses Grid -->
           <div class="courses-grid">
-            <div *ngFor="let group of tabItem.courses" class="course-group">
+            <div *ngFor="let group of tabItem.courses" class="course-card">
               <ul>
                 <li *ngFor="let course of group">{{ course }}</li>
               </ul>
@@ -49,14 +48,34 @@
           </div>
         </div>
 
-        <!-- Default layout for other tabs -->
-        <div *ngIf="tabItem.id !== 'Our Strength'">
-          <!-- Show image above text -->
+        <!-- Special layout for TANSAM COLLABORATION -->
+        <div *ngIf="tabItem.id === 'WvS award finalist'">
+          <!-- Images -->
+          <div class="tab-logos" *ngIf="tabItem.images">
+            <div *ngFor="let logo of tabItem.images" class="logo-box">
+              <img [src]="logo" [alt]="tabItem.title + ' logo'" />
+            </div>
+          </div>
+
+          <!-- Title -->
+          <h4>{{ tabItem.title }}</h4>
+
+          <!-- Render bullet points -->
+          <ul>
+            <li *ngFor="let point of tabItem.content">
+              {{ point }}
+            </li>
+          </ul>
+        </div>
+
+        <!-- Default layout for all other tabs -->
+        <div *ngIf="tabItem.id !== 'Our Strength' && tabItem.id !== 'WvS award finalist'">
+          <!-- Image above text -->
           <div class="tab-image" *ngIf="tabItem.image">
             <img [src]="tabItem.image" [alt]="tabItem.title" />
           </div>
 
-          <!-- If multiple logos -->
+          <!-- Multiple logos -->
           <div class="tab-logos" *ngIf="tabItem.images">
             <div *ngFor="let logo of tabItem.images" class="logo-box">
               <img [src]="logo" [alt]="tabItem.title + ' logo'" />
