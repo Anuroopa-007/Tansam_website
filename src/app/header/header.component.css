@@ -190,6 +190,11 @@
 .nav-list span:hover {
   color: #f0db4f;
 }
+.nav-list li.active-link a {
+  color: #f0db4f !important;
+  font-weight: bold;
+}
+
 
 /* .nav-list .active > a,
 .nav-list .active > span {
@@ -489,3 +494,5 @@ notification */
     display: flex;
   }
 }
+
+

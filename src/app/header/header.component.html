@@ -78,14 +78,22 @@
     </div>
 
     <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
-      <li class="active"><a href="#" (click)="closeMenu()">Home</a></li>
-      <li class="active">
+      <!-- <li class="active" ><a href="#" (click)="closeMenu()">Home</a></li> -->
+      <li routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="['/']" (click)="closeMenu()">Home</a>
+      </li>
+
+      <!-- <li class="active">
+
         <a [routerLink]="['/aboutus']" routerLinkActive="active" (click)="closeMenu()">About Us</a>
+      </li> -->
+      <li routerLinkActive="active-link">
+        <a [routerLink]="['/aboutus']" (click)="closeMenu()">About Us</a>
       </li>
 
 
-      <li class="dropdown" [ngClass]="{ active: isDropdownOpen['labs'] }" (click)="toggleDropdown('labs')">
-        <span class="menu-label">
+      <li class="dropdown"  [ngClass]="{ active: isDropdownOpen['labs'] }" (click)="toggleDropdown('labs')" >
+        <span class="menu-label" >
           Our Research Labs
           <i class="fa-solid" [ngClass]="{
               'fa-chevron-down': !isDropdownOpen['labs'],
@@ -149,7 +157,10 @@
         </ul>
       </li>
       <!-- <li class="active"><a [routerLink]="['Digital-Transformation']" (click)="closeMenu()">Digital Transformation</a></li> -->
-      <li class="active"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li>
+      <!-- <li  routerLinkActive="active-link"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li> -->
+      <li routerLinkActive="active-link">
+        <a [routerLink]="['/news']" (click)="closeMenu()">Latest News</a>
+      </li>
     </ul>
   </nav>
 </div>
