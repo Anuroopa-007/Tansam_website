@@ -255,7 +255,7 @@ export class HeroComponent implements OnInit {
       slider_title: 'Seventh Slide',
       published: true,
       alt: 'Slide 7',
-      title: 'MR.Sandeep Nanduri(IAS) MD of TANSAM visits TANSAM',
+      title: 'MR.Sandeep Nanduri(IAS) MD of TIDCO visits TANSAM',
       caption: '',
     },
     {
@@ -263,7 +263,7 @@ export class HeroComponent implements OnInit {
       slider_title: 'Eigth Slide',
       published: true,
       alt: 'Slide 8',
-      title: 'Tansam Wlecomes Honorble Minister T.R.B RAJAA ',
+      title: 'Tansam Welcome Honorble Minister T.R.B RAJAA ',
       caption: '',
     },
   ];
