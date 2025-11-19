@@ -1,0 +1,14 @@
+[
+  {
+    "category": "Polytechnic",
+    "title": "Naan Mudhalvan - Polytechnic Hackathon",
+    "description": "This hackathon encourages polytechnic students to innovate and showcase their skills.",
+    "image": "assets/polytechnic/polytech_hackathon.jpeg"
+  },
+  {
+    "category": "Engineering",
+    "title": "Naan Mudhalvan - Engineering Hackathon",
+    "description": "TANSAM successfully organized the Engineering 2025–2026 Hackathon Programme at our TANSAM premises, with a dedicated focus on Industrial IoT and Industry 4.0 technologies. The event witnessed active participation from engineering students and innovators from across Tamil Nadu. The hackathon provided a dynamic platform for solving real-time industrial challenges, fostering innovation, and encouraging collaboration between academia and industry.",
+    "image": "assets/engineering/engg_hackathon.jpeg"
+  }
+]

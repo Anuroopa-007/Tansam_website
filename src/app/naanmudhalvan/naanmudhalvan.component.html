@@ -82,17 +82,23 @@ New Feature
   <div class="carousel-wrapper">
     <button class="arrow left" (click)="prevTestimonial()">&#10094;</button>
 
-    <div class="testimonial-carousel">
-      <div
-        *ngFor="let testimonial of visibleTestimonials; let i = index"
-        class="testimonial-card"
-        [class.center]="i === 1">
-        <video controls controlsList="nodownload" *ngIf="testimonial.video">
-          <source [src]="testimonial.video" type="video/mp4">
-        </video>
-      </div>
-
-    </div>
+<!-- Testimonials -->
+<div class="testimonial-carousel">
+  <div
+    *ngFor="let testimonial of visibleTestimonials; let i = index"
+    class="testimonial-card"
+    [class.center]="i === 1">
+    
+    <video
+      #videoPlayer
+      controls
+      controlsList="nodownload"
+      *ngIf="testimonial.video"
+      (play)="pauseOtherVideos('testimonial', i)">
+      <source [src]="testimonial.video" type="video/mp4">
+    </video>
+  </div>
+</div>
 
     <button class="arrow right" (click)="nextTestimonial()">&#10095;</button>
   </div>
@@ -107,19 +113,37 @@ New Feature
   <div class="carousel-wrapper">
     <button class="arrow left" (click)="prevTraining()">&#10094;</button>
 
-    <div class="testimonial-carousel">
-      <div
-        *ngFor="let video of visibleTrainingVideos; let i = index"
-        class="testimonial-card"
-        [class.center]="i === 1">
-        <video controls controlsList="nodownload" *ngIf="video.url">
-          <source [src]="video.url" type="video/mp4">
-        </video>
-      </div>
-
-    </div>
+      <!-- Training Videos -->
+<div class="testimonial-carousel">
+  <div
+    *ngFor="let video of visibleTrainingVideos; let i = index"
+    class="testimonial-card"
+    [class.center]="i === 1">
+    
+    <video
+      #trainingVideoPlayer
+      controls
+      controlsList="nodownload"
+      *ngIf="video.url"
+      (play)="pauseOtherVideos('training', i)">
+      <source [src]="video.url" type="video/mp4">
+    </video>
+  </div>
+</div>
 
     <button class="arrow right" (click)="nextTraining()">&#10095;</button>
   </div>
 </div>
+
+
+<div class="events-section">
+  <div *ngFor="let event of naanmudhalvan_events" class="event-card">
+    <h3 class="title">{{ event.title }}</h3>
+    <p class="event-description">{{ event.description }}</p>
+    <div class="event-image">
+      <img [src]="event.image" [alt]="event.title" />
+    </div>
+  </div>
+</div>
+
 
