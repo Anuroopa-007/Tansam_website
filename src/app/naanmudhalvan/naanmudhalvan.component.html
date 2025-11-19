@@ -13,12 +13,14 @@ Together, we rise, building a skilled, confident, and successful generation!
         </p>
     </div>
 </div>
+
+
 <!-- Ongoing Table -->
-<div class="color">
+<div class="color" *ngIf="ongoingData.length > 0">
   <h2>Ongoing Courses</h2>
 </div>
 
-<div class="table-container"> <!-- Add this wrapper for scrolling -->
+<div class="table-container" *ngIf="ongoingData.length > 0"> <!-- Only show if data exists -->
   <table border="1">
     <thead>
       <tr>
@@ -33,7 +35,7 @@ Together, we rise, building a skilled, confident, and successful generation!
       </tr>
       <!-- Ongoing Total Row -->
       <tr style="font-weight: bold; background-color: #d1ecf1;">
-        <td></td> <!-- Empty SL.NO column for the total row -->
+        <td></td>
         <td *ngFor="let header of headers">{{ ongoingTotal[header] || '' }}</td>
       </tr>
     </tbody>
