@@ -6,8 +6,8 @@
     <div class="description">
         <p>
             TANSAM is proud to empower 80,000+ students, transforming dreams into reality.
-Bridging talent and industrial Exposures by TIDCO and students gain real-world skills that open doors to Innovations. 
-From aspiration to achievement, Students are the leaders of tomorrow, strengthening careers through Skill enhancement through TN Skills. 
+Bridging talent and industrial Exposures by TIDCO and students gain real-world skills that open doors to Innovations.
+From aspiration to achievement, Students are the leaders of tomorrow, strengthening careers through Skill enhancement through TN Skills.
 This milestone in skill development by Naan Mudhalvan program is shaping Tamil Nadu’s future, impacting young minds.
 Together, we rise, building a skilled, confident, and successful generation!
         </p>
@@ -68,3 +68,56 @@ Together, we rise, building a skilled, confident, and successful generation!
     </tbody>
   </table>
 </div>
+<!--
+New Feature
+-->
+<!-- Student Testimonials Section -->
+<div class="define">
+  <div class="title">
+    <h3>Student Testimonials</h3>
+  </div>
+
+  <div class="carousel-wrapper">
+    <button class="arrow left" (click)="prevTestimonial()">&#10094;</button>
+
+    <div class="testimonial-carousel">
+      <div
+        *ngFor="let testimonial of visibleTestimonials; let i = index"
+        class="testimonial-card"
+        [class.center]="i === 1">
+        <video controls controlsList="nodownload" *ngIf="testimonial.video">
+          <source [src]="testimonial.video" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <button class="arrow right" (click)="nextTestimonial()">&#10095;</button>
+  </div>
+</div>
+
+
+<div class="define">
+  <div class="title">
+    <h3>Training Videos</h3>
+  </div>
+
+  <div class="carousel-wrapper">
+    <button class="arrow left" (click)="prevTraining()">&#10094;</button>
+
+    <div class="testimonial-carousel">
+      <div
+        *ngFor="let video of visibleTrainingVideos; let i = index"
+        class="testimonial-card"
+        [class.center]="i === 1">
+        <video controls controlsList="nodownload" *ngIf="video.url">
+          <source [src]="video.url" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <button class="arrow right" (click)="nextTraining()">&#10095;</button>
+  </div>
+</div>
+

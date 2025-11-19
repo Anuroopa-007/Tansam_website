@@ -148,7 +148,56 @@
         "STUDENTS COUNT": 1966,
         "FACULTY COUNT": 65,
         "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 15,
+        "COURSE": "INDUSTRIAL DESIGN TECHNOLOGY",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 36,
+        "STUDENTS COUNT": 7324,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 16,
+        "COURSE": "ADDITIVE MANUFACTURING",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 158,
+        "STUDENTS COUNT": 1478,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 17,
+        "COURSE": "PLC PROGRAMMING & APPLICATIONS",
+        "INSTITUTION TYPE": "POLYTECHNIC",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 112,
+        "STUDENTS COUNT": 3313,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 18,
+        "COURSE": "EMBEDDED SYSTEMS FOR IOT – RASPBERRY PI",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 84,
+        "STUDENTS COUNT": 3382,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
+      },
+      {
+        "SL.NO": 19,
+        "COURSE": "INDUSTRIAL IOT & INDUSTRY 4.0",
+        "INSTITUTION TYPE": "ENGINEERING",
+        "YEAR/SEM": "2024-2025 EVEN  SEM",
+        "COLLEGE COUNT": 65,
+        "STUDENTS COUNT": 2398,
+        "FACULTY COUNT": 65,
+        "STATUS": "Ongoing"
       }
     ]
   }
-  
