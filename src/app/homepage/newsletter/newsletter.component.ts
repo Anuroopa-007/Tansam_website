@@ -21,7 +21,7 @@ export class NewsletterComponent {
       image: 'assets/bannerimage/hackathon-1.jpeg'
     },
     {
-      title: 'INTERNSHIP Valedictory Function',
+      title: 'Industrial Training Valedictory Function',
       subtitle: 'Panimalar Engineering College',
       image: 'assets/mainimage/panimalar-hackathon.jpeg'
     },
