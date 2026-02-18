@@ -290,6 +290,15 @@
     display: block;
   }
 
+  .hamburger.close-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3100;
+    color: #00569a;
+    font-size: 28px;
+  }
+
   .nav-list {
     display: none;
     flex-direction: column;
