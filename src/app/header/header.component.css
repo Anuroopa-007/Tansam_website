@@ -293,13 +293,16 @@
   .nav-list {
     display: none;
     flex-direction: column;
-    background: #00569a;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 220px;
-    padding: 15px 0;
-    border-radius: 5px 0 0 5px;
+    background: #ffffff;   /* 🔥 white background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    padding-top: 80px;
+    overflow-y: auto;
+    border-radius: 0 5px 5px 0;
+    z-index: 3000;
   }
 
   .nav-list.active {
@@ -315,6 +318,39 @@
   .nav-list span {
     padding: 10px 15px;
     display: block;
+    color: #00569a;  /* blue text */
+    font-weight: 600;
+  }
+
+  /* Hover effect */
+  .nav-list a:hover,
+  .nav-list span:hover {
+    color: #003f70;
+  }
+
+  /* Dropdown menu background white and stack vertically */
+  .dropdown-menu,
+  .labs-grid {
+    position: relative;
+    background: #ffffff;
+    box-shadow: none; /* Remove shadow for seamless integration in mobile menu */
+    min-width: auto;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    top: auto;
+    left: auto;
+    gap: 0; /* Reduce any extra gaps */
+  }
+
+  .labs-grid {
+    grid-template-columns: 1fr; /* Single column to avoid wrapping/gaps */
+  }
+
+  .dropdown-menu li,
+  .labs-grid li {
+    padding: 8px 20px; /* Adjust padding for better spacing in mobile */
+    text-align: left; /* Align left for readability */
   }
 
   .logosection {
@@ -478,21 +514,4 @@ notification */
   .logo-left img[alt="Siemens Logo"] {
     height: 20px;
   }
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    background: #00569a;
-    position: absolute;
-    top: 60px;
-    left: 0;   /* 👈 now opens from left */
-    width: 220px;
-    padding: 15px 0;
-    border-radius: 0 5px 5px 0; /* adjust rounded corners */
-  }
-
-  .nav-list.active {
-    display: flex;
-  }
 }
-
-
