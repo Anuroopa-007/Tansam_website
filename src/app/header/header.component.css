@@ -18,7 +18,7 @@
    Topline Section
 ================================= */
 .topline {
-  background-color:  #00569a;
+  background-color: #00569a;
   padding: 5px 0;
   font-size: 14px;
   color: #fff;
@@ -58,12 +58,12 @@
 }
 
 .active-link {
-  color: #f0db4f; /* stays yellow when active */
-  font-weight: bold; /* optional */
+  color: #f0db4f;
+  font-weight: bold;
 }
 
 /* ================================
-   Logo Section with Background
+   Logo Section - Desktop
 ================================= */
 .logosection {
   display: flex;
@@ -89,7 +89,6 @@
   z-index: -1;
 }
 
-/* Left and Right Logos */
 .logo-left,
 .logo-right {
   display: flex;
@@ -107,10 +106,8 @@
 
 .logo-left img[alt="Siemens Logo"] {
   height: 20px;
-  object-fit: contain;
 }
 
-/* Center Title */
 .header-title {
   flex: 1;
   text-align: center;
@@ -131,21 +128,21 @@
 .subtitle {
   font-size: 20px;
   font-weight: normal;
-  color:#00569a;
+  color: #00569a;
   margin-top: 4px;
   font-family: "Red Rose", serif;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 /* ================================
-   Navbar Section (Centered Links)
+   Navbar - Desktop
 ================================= */
 .navbar {
   background-color: #00569a;
   padding: 10px 80px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center all links */
+  justify-content: center;
   position: relative;
 }
 
@@ -154,19 +151,13 @@
   font-size: 24px;
   cursor: pointer;
   color: #fff;
-  position: absolute;
-  left: 20px; /* keep menu icon on left for mobile */
-}
-
-.hamburger.close-icon {
-  font-size: 26px;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centered */
+  justify-content: center;
   gap: 25px;
   margin: 0;
   padding: 0;
@@ -190,19 +181,14 @@
 .nav-list span:hover {
   color: #f0db4f;
 }
+
 .nav-list li.active-link a {
   color: #f0db4f !important;
   font-weight: bold;
 }
 
-
-/* .nav-list .active > a,
-.nav-list .active > span {
-  color: #f0db4f;
-} */
-
 /* ================================
-   Dropdowns (Hidden Initially)
+   Dropdowns
 ================================= */
 .labs-grid,
 .dropdown-menu {
@@ -222,9 +208,8 @@
   z-index: 2000;
 }
 
-/* Show on hover or active */
-.labs-dropdown:hover .labs-grid,
-.dropdown.active .dropdown-menu {
+.dropdown.active .dropdown-menu,
+.dropdown.active .labs-grid {
   display: block;
   opacity: 1;
   visibility: visible;
@@ -251,164 +236,29 @@
   border-radius: 3px;
 }
 
-/* Labs grid */
 .labs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
 }
 
-.labs-grid li {
-  padding: 8px 12px;
-}
-/* Show dropdown only when active (click), not hover */
-.dropdown.active .dropdown-menu,
-.dropdown.active .labs-grid {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
-
-
 /* ================================
-   Responsive
+   Scrolling Notification
 ================================= */
-@media (max-width: 1024px) {
-  .nav-list {
-    gap: 15px;
-  }
-  .logosection {
-    padding: 20px 40px;
-  }
-  .navbar {
-    padding: 10px 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.close-icon {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 3100;
-    color: #00569a;
-    font-size: 28px;
-  }
-
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    background: #ffffff;   /* 🔥 white background */
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 250px;
-    padding-top: 80px;
-    overflow-y: auto;
-    border-radius: 0 5px 5px 0;
-    z-index: 3000;
-  }
-
-  .nav-list.active {
-    display: flex;
-  }
-
-  .nav-list li {
-    text-align: center;
-    width: 100%;
-  }
-
-  .nav-list a,
-  .nav-list span {
-    padding: 10px 15px;
-    display: block;
-    color: #00569a;  /* blue text */
-    font-weight: 600;
-  }
-
-  /* Hover effect */
-  .nav-list a:hover,
-  .nav-list span:hover {
-    color: #003f70;
-  }
-
-  /* Dropdown menu background white and stack vertically */
-  .dropdown-menu,
-  .labs-grid {
-    position: relative;
-    background: #ffffff;
-    box-shadow: none; /* Remove shadow for seamless integration in mobile menu */
-    min-width: auto;
-    border-radius: 0;
-    padding: 0;
-    margin: 0;
-    top: auto;
-    left: auto;
-    gap: 0; /* Reduce any extra gaps */
-  }
-
-  .labs-grid {
-    grid-template-columns: 1fr; /* Single column to avoid wrapping/gaps */
-  }
-
-  .dropdown-menu li,
-  .labs-grid li {
-    padding: 8px 20px; /* Adjust padding for better spacing in mobile */
-    text-align: left; /* Align left for readability */
-  }
-
-  .logosection {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-position: center;
-  }
-
-  .header-title .main-title {
-    white-space: normal;
-    font-size: 22px;
-  }
-
-  .header-title {
-    order: 3;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .logo-left,
-  .logo-right {
-    order: 1;
-    gap: 10px;
-  }
-}
-
-/*
-notification */
-
-
-/* Scrolling Notification Container */
 .scrollingnotif {
   display: flex;
   flex: 1;
   align-items: center;
-  justify-content: center; /* Aligns to the left */
-  /* padding: 10px; */
+  justify-content: center;
   font-size: 16px;
   color: #0a5296;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  /* margin: 0 20px; */
   width: auto;
   font-family: "Nunito", serif;
 }
 
-/* Notification Frame */
 .notification-frame {
   display: flex;
   justify-content: space-between;
@@ -421,106 +271,224 @@ notification */
   max-width: 100%;
 }
 
-/* Default Notification (Static text on left) */
-.default-notification {
-  color: #0a5296;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 15px;
-  background-color: #b4b4b4;
-  border-radius: 15px 0px 15px 0px;
-  margin-right: 15px; /* Space between default notification and scrolling content */
-}
-
-/* Scrolling Content */
 .scrolling-content {
   display: flex;
   flex: 1;
-  justify-content:center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .notification-link {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit color from parent (e.g., black or dark gray) */
+  text-decoration: none;
+  color: inherit;
 }
 
 .notification-text {
   color: #fff;
   font-size: 18px;
-  font-weight: normal;
   white-space: nowrap;
-  animation: scroll-left 15s linear infinite; /* Scrolling animation */
+  animation: scroll-left 15s linear infinite;
   margin: 0;
-  animation-play-state: running;
   font-weight: 700;
 }
 
-/* Make the icon red */
 .notification-link i {
-  color: red; /* Set the icon color to red */
+  color: red;
 }
 
-/* Pause animation on hover */
 .notification-text:hover {
-  animation-play-state: paused; /* Pause the animation */
+  animation-play-state: paused;
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(100%); /* Start off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* End off-screen to the left */
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
+/* ================================
+   Responsive - Tablet
+================================= */
+@media (max-width: 1024px) {
+  .nav-list { gap: 15px; }
+  .logosection { padding: 20px 40px; }
+  .navbar { padding: 10px 40px; }
+}
 
+/* ================================
+   Responsive - Mobile (KEY CHANGES)
+================================= */
 @media (max-width: 768px) {
+
+  /* --- TOPLINE: hide scrolling notification on mobile to save space --- */
+  .scrollingnotif {
+    display: none;
+  }
+
+  /* --- LOGO SECTION: single compact row like reference screenshot --- */
   .logosection {
-    flex-direction: column;   /* stack vertically */
+    flex-direction: row;          /* keep in ONE row */
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    padding: 15px;
-    gap: 15px;
+    justify-content: space-between;
+    padding: 10px 15px;           /* tight padding */
+    gap: 8px;
   }
 
-  .logo-left,
-  .logo-right {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .header-title {
-    order: 2;      /* make sure title comes in middle */
-    text-align: center;
-    width: 100%;
-    margin: 10px 0;
-  }
-
+  /* Left logos: TANSAM + Siemens stacked */
   .logo-left {
-    order: 1;      /* first logos */
+    display: flex;
+    flex-direction: column;       /* stack TANSAM logo above Siemens text */
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
   }
 
-  .logo-right {
-    order: 3;      /* last logos */
-  }
-
-  .header-title .main-title {
-    font-size: 24px;  /* smaller font for mobile */
-    white-space: normal;
-  }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
-  .logo-left img,
-  .logo-right img {
-    height: 80px;   /* shrink logos for mobile */
+  .logo-left img {
+    height: 55px;                 /* smaller for mobile */
+    object-fit: contain;
   }
 
   .logo-left img[alt="Siemens Logo"] {
-    height: 20px;
+    height: 14px;                 /* keep Siemens text small */
+  }
+
+  /* Center title: compact */
+  .header-title {
+    flex: 1;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .header-title .main-title {
+    font-size: 13px;              /* small enough to fit in one row */
+    white-space: normal;
+    line-height: 1.3;
+    font-weight: bold;
+    color: #00569a;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    margin-top: 2px;
+    color: #00569a;
+  }
+
+  /* Right logos: TIDCO + TN side by side */
+  .logo-right {
+    display: flex;
+    flex-direction: row;          /* side by side */
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .logo-right img {
+    height: 45px;                 /* smaller for mobile */
+    object-fit: contain;
+  }
+
+  /* --- NAVBAR: hamburger left, full-width bar --- */
+  .navbar {
+    padding: 10px 15px;
+    justify-content: flex-start; /* align hamburger to left */
+  }
+
+  .hamburger {
+    display: block;               /* show hamburger */
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    /* no absolute positioning needed, it flows naturally */
+  }
+
+  /* Slide-in side drawer */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    padding-top: 60px;
+    overflow-y: auto;
+    border-radius: 0 5px 5px 0;
+    z-index: 3000;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-list a,
+  .nav-list span {
+    padding: 12px 20px;
+    display: block;
+    color: #00569a;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .nav-list a:hover,
+  .nav-list span:hover {
+    color: #003f70;
+    background: #f5f5f5;
+  }
+
+  /* Close icon inside the drawer */
+  .hamburger.close-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 3100;
+    color: #00569a;
+    font-size: 26px;
+  }
+
+  /* Mobile dropdowns: inline, no absolute positioning */
+  .dropdown-menu,
+  .labs-grid {
+    position: relative;
+    background: #f9f9f9;
+    box-shadow: none;
+    min-width: auto;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    top: auto;
+    left: auto;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown.active .dropdown-menu,
+  .dropdown.active .labs-grid {
+    display: block;
+  }
+
+  .labs-grid {
+    grid-template-columns: 1fr;   /* single column on mobile */
+  }
+
+  .dropdown-menu li,
+  .labs-grid li {
+    padding: 8px 30px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-menu a,
+  .labs-grid a {
+    font-size: 14px;
+    color: #00569a;
+    padding: 4px 0;
   }
 }

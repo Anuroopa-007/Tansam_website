@@ -1,10 +1,10 @@
 <div class="sticky-header" [ngClass]="{ sticky: isScrolled }">
+  <!-- Topline -->
   <div class="header" id="header">
     <div class="topline">
       <div class="container">
         <div class="socialmedia">
-          <a href="https://www.facebook.com/people/TANSAM-Powered-by-Siemens/61556964369639/#" target="_blank"
-            class="facebook">
+          <a href="https://www.facebook.com/people/TANSAM-Powered-by-Siemens/61556964369639/#" target="_blank" class="facebook">
             <i class="fab fa-facebook"></i>
           </a>
           <a href="https://x.com/TANSAM2022" target="_blank" class="twitter">
@@ -17,16 +17,14 @@
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <!-- Scrolling Notification -->
+
+        <!-- Scrolling Notification (hidden on mobile) -->
         <div class="scrollingnotif">
           <div class="notification-frame">
-            <!-- <span class="default-notification">New Notification</span> -->
-            <!-- Default notification -->
             <div class="scrolling-content">
               <a class="notification-link" href="">
                 <p class="notification-text">
-                  <i class="fa-solid fa-bell fa-shake"></i> TANSAM is establishing academic Spoke centres across
-                  Tamilnadu!!!
+                  <i class="fa-solid fa-bell fa-shake"></i> TANSAM is establishing academic Spoke centres across Tamilnadu!!!
                 </p>
               </a>
             </div>
@@ -43,9 +41,9 @@
     </div>
   </div>
 
-  <!-- Logo section -->
+  <!-- Logo Section: Desktop = full layout, Mobile = compact single row -->
   <section class="header-container logosection">
-    <!-- Left Logos (Now Siemens & TANSAM) -->
+    <!-- Left Logos -->
     <div class="logo-left">
       <a href="" target="">
         <img src="assets/headerimage/tansamoldlogo.png" alt="TANSAM Logo" />
@@ -59,7 +57,7 @@
       <div class="subtitle">Center of Excellence</div>
     </div>
 
-    <!-- Right Logos (Now TIDCO & TN Government) -->
+    <!-- Right Logos -->
     <div class="logo-right">
       <a href="https://tidco.com/" target="_blank">
         <img src="assets/headerimage/tidcologo.png" alt="TIDCO Logo" />
@@ -70,98 +68,73 @@
     </div>
   </section>
 
-  <!-- Navigation start here -->
+  <!-- Navbar -->
   <nav class="navbar">
-    <!-- Hamburger Menu (Toggles Open/Close) -->
     <div class="hamburger" (click)="toggleMenu()" [ngClass]="{ 'close-icon': isMenuOpen }">
       {{ isMenuOpen ? "✖" : "☰" }}
     </div>
 
     <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
-      <!-- <li class="active" ><a href="#" (click)="closeMenu()">Home</a></li> -->
       <li routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
         <a [routerLink]="['/']" (click)="closeMenu()">Home</a>
       </li>
 
-      <!-- <li class="active">
-
-        <a [routerLink]="['/aboutus']" routerLinkActive="active" (click)="closeMenu()">About Us</a>
-      </li> -->
       <li routerLinkActive="active-link">
         <a [routerLink]="['/aboutus']" (click)="closeMenu()">About Us</a>
       </li>
 
-
-      <li class="dropdown"  [ngClass]="{ active: isDropdownOpen['labs'] }" (click)="toggleDropdown('labs')" >
-        <span class="menu-label" >
+      <li class="dropdown" [ngClass]="{ active: isDropdownOpen['labs'] }" (click)="toggleDropdown('labs')">
+        <span class="menu-label">
           Our Research Labs
           <i class="fa-solid" [ngClass]="{
-              'fa-chevron-down': !isDropdownOpen['labs'],
-              'fa-chevron-up': isDropdownOpen['labs']
-            }"></i>
+            'fa-chevron-down': !isDropdownOpen['labs'],
+            'fa-chevron-up': isDropdownOpen['labs']
+          }"></i>
         </span>
         <ul class="labs-grid" *ngIf="isDropdownOpen['labs']">
           <li><a [routerLink]="['/lab/Innovative_Manufacturing']">Innovative Manufacturing</a></li>
           <li><a [routerLink]="['/lab/Smart_Factory_Center']">Smart Factory Center</a></li>
           <li><a [routerLink]="['/lab/ar_vr']">AR | VR | MR Research Centre</a></li>
           <li><a [routerLink]="['/lab/Research_Centre_For_PLM']">Research Centre for PLM</a></li>
-          <li><a [routerLink]="['/lab/Research_Centre_For_Asset_Performance']">Research Centre for Asset Performance</a>
-          </li>
+          <li><a [routerLink]="['/lab/Research_Centre_For_Asset_Performance']">Research Centre for Asset Performance</a></li>
           <li><a [routerLink]="['/lab/Product_Innovation_Center']">Product Innovation Center</a></li>
           <li><a [routerLink]="['/lab/Predictive_Engineering']">Predictive Engineering</a></li>
         </ul>
       </li>
 
-
-      <!-- Naan Mudhalvan Dropdown -->
-      <li class="dropdown" [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }"
-        (click)="toggleDropdown('naanmudhalvan')">
-        <span class="active">
+      <li class="dropdown" [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }" (click)="toggleDropdown('naanmudhalvan')">
+        <span>
           Skilling
           <i class="fa-solid" [ngClass]="{
-                'fa-chevron-down': !isDropdownOpen['naanmudhalvan'],
-                'fa-chevron-up': isDropdownOpen['naanmudhalvan']
-              }"></i>
+            'fa-chevron-down': !isDropdownOpen['naanmudhalvan'],
+            'fa-chevron-up': isDropdownOpen['naanmudhalvan']
+          }"></i>
         </span>
         <ul class="dropdown-menu">
-          <li class="no-arrow">
-            <a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a>
-          </li>
-          <li class="no-arrow">
-            <a [routerLink]="['skilling']">Corporate</a>
-          </li>
-          <li class="no-arrow">
-            <a [routerLink]="['academia']">Academia</a>
-          </li>
-          <li class="no-arrow">
-            <a [routerLink]="['courseware']">Courseware</a>
-          </li>
+          <li class="no-arrow"><a [routerLink]="['Naan_mudhlvan/up_skilling']">Naan Mudhalvan</a></li>
+          <li class="no-arrow"><a [routerLink]="['skilling']">Corporate</a></li>
+          <li class="no-arrow"><a [routerLink]="['academia']">Academia</a></li>
+          <li class="no-arrow"><a [routerLink]="['courseware']">Courseware</a></li>
         </ul>
       </li>
-      <!-- Digital Transformation Dropdown -->
+
       <li class="dropdown" [ngClass]="{ active: isDropdownOpen['digital'] }" (click)="toggleDropdown('digital')">
-        <span class="active">
+        <span>
           Digital Transformation
           <i class="fa-solid" [ngClass]="{
-      'fa-chevron-down': !isDropdownOpen['digital'],
-      'fa-chevron-up': isDropdownOpen['digital']
-    }"></i>
+            'fa-chevron-down': !isDropdownOpen['digital'],
+            'fa-chevron-up': isDropdownOpen['digital']
+          }"></i>
         </span>
         <ul class="dropdown-menu">
-          <li class="no-arrow">
-            <a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Web & Mobile Development</a>
-          </li>
-          <li class="no-arrow">
-            <a [routerLink]="['/ai']" (click)="closeMenu()">Artificial Intelligence</a>
-          </li>
+          <li class="no-arrow"><a [routerLink]="['/Digital-Transformation']" (click)="closeMenu()">Web & Mobile Development</a></li>
+          <li class="no-arrow"><a [routerLink]="['/ai']" (click)="closeMenu()">Artificial Intelligence</a></li>
         </ul>
       </li>
-      <!-- <li class="active"><a [routerLink]="['Digital-Transformation']" (click)="closeMenu()">Digital Transformation</a></li> -->
-      <!-- <li  routerLinkActive="active-link"><a [routerLink]="" (click)="closeMenu()">Latest News</a></li> -->
+
       <li routerLinkActive="active-link">
         <a [routerLink]="['/news']" (click)="closeMenu()">Latest News</a>
       </li>
     </ul>
   </nav>
 </div>
-<!-- Navigation end here -->
