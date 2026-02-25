@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /* ================================
    Sticky Header
 ================================= */
@@ -121,16 +122,15 @@
   color: #00569a;
   margin: 0;
   white-space: nowrap;
-  font-family: "Red Rose", serif;
+  font-family: "Nunito Sans", sans-serif;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: normal;
   color: #00569a;
   margin-top: 4px;
-  font-family: "Red Rose", serif;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
@@ -371,6 +371,7 @@
     font-size: 11px;
     margin-top: 2px;
     color: #00569a;
+    font-family: "Nunito Sans", sans-serif;
   }
 
   /* Right logos: TIDCO + TN side by side */
@@ -448,7 +449,7 @@
     top: 15px;
     left: 15px;
     z-index: 3100;
-    color: #00569a;
+    color: #9a0000 !important;
     font-size: 26px;
   }
 

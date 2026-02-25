@@ -10,7 +10,6 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrl: './latestnews.component.css',
 })
 export class LatestnewsComponent {
-
   isPlaying = false;
   safeVideoUrl: SafeResourceUrl | null = null;
 
@@ -20,8 +19,8 @@ export class LatestnewsComponent {
     title: 'Avadi School Students Experience Industry 4.0 at TANSAM',
     date: '23 Feb 2026',
     category: 'IV',
-    videoUrl: 'https://www.youtube.com/embed/L3RXcQNSDtE',
-    thumbnail: 'https://img.youtube.com/vi/L3RXcQNSDtE/maxresdefault.jpg'
+    videoUrl: 'https://www.youtube-nocookie.com/embed/L3RXcQNSDtE',
+    thumbnail: 'https://img.youtube.com/vi/L3RXcQNSDtE/maxresdefault.jpg',
   };
 
   playVideo() {
@@ -29,7 +28,8 @@ export class LatestnewsComponent {
 
     if (this.isPlaying) {
       this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-        this.newsVideo.videoUrl + '?autoplay=1'
+        this.newsVideo.videoUrl +
+          '?autoplay=1&rel=0&modestbranding=1&playsinline=1',
       );
     } else {
       this.safeVideoUrl = null;
