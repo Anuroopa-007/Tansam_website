@@ -14,11 +14,13 @@
            class="thumbnail" />
 
       <!-- Video -->
-      <iframe *ngIf="isPlaying"
-              [src]="safeVideoUrl"
-              allow="autoplay; encrypted-media"
-              allowfullscreen>
-      </iframe>
+<iframe
+  *ngIf="isPlaying"
+  [src]="safeVideoUrl"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
 
       <!-- Play -->
 <div class="play-overlay"
