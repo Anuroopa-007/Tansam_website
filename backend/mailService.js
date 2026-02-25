@@ -10,30 +10,59 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Date formatting function → DD Month YYYY
+function formatDateToWords(dateString) {
+  if (!dateString) return "N/A";
+
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  const date = new Date(dateString);
+  if (isNaN(date)) return dateString;
+
+  const day = String(date.getDate()).padStart(2, "0");
+  const monthName = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${day} ${monthName} ${year}`;
+}
+
 async function sendInternshipEmail(data) {
   const mailOptions = {
     from: '"Internship Form" <contact@tansam.org>',
-    to: 'contact@tansam.org', // Receiving email
-    cc: ['hr@tansam.org', 'hannahrr@tansam.org','nateshc@tansam.org'],
+    to: 'contact@tansam.org',
+    cc: ['hr@tansam.org', 'hannahrr@tansam.org', 'nateshc@tansam.org'],
     subject: 'New Internship Application',
+
     html: `
-      <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4;">
-        <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <div style="background-color:rgb(151, 195, 243); color: #ffffff; padding: 20px;">
-            <h2 style="margin: 0;">Internship Application</h2>
+      <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #eef2f7;">
+        <div style="max-width: 600px; margin: 0 auto; background:#ffffff; border-radius: 10px; overflow: hidden; border: 1px solid #dce3eb;">
+
+          <div style="background: linear-gradient(90deg, #4A90E2, #357ABD); padding: 20px; color: #ffffff;">
+            <h2 style="margin: 0; font-size: 22px; font-weight: 600;">New Internship Application</h2>
           </div>
-          <div style="padding: 20px;">
-            <p><strong>Name:</strong> ${data.fullName}</p>
-            <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>Contact:</strong> ${data.contactNumber}</p>
-            <p><strong>College:</strong> ${data.collegeName}</p>
-            <p><strong>Start Date:</strong> ${data.startDate}</p>
-            <p><strong>End Date:</strong> ${data.endDate}</p>
-            <p><strong>Duration:</strong> ${data.duration}</p>
-            <p><strong>Course:</strong> ${data.course}</p>
-            <p><strong>Referred By:</strong> ${data.referredBy || 'N/A'}</p>
+
+          <div style="padding: 25px; color: #333;">
+            <p style="font-size: 16px; margin-bottom: 15px;">
+              A new internship application has been submitted. Details are as follows:
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 8px 0; font-weight: bold;">Name:</td><td>${data.fullName}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Email:</td><td>${data.email}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Contact:</td><td>${data.contactNumber}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">College:</td><td>${data.collegeName}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Start Date:</td><td>${formatDateToWords(data.startDate)}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">End Date:</td><td>${formatDateToWords(data.endDate)}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Duration:</td><td>${data.duration}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Course:</td><td>${data.course}</td></tr>
+              <tr><td style="padding: 8px 0; font-weight: bold;">Referred By:</td><td>${data.referredBy || 'N/A'}</td></tr>
+            </table>
           </div>
-          <div style="background-color: #f1f1f1; padding: 15px; text-align: center; font-size: 12px; color: #888;">
+
+          <div style="background: #f5f7fa; padding: 15px; text-align: center; font-size: 12px; color: #777; border-top: 1px solid #e1e6ec;">
             © ${new Date().getFullYear()} TANSAM. All rights reserved.
           </div>
         </div>

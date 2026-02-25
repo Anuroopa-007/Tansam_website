@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Angular Basics",
+    "url": "assets/naan_mudhalvan/Training/Training Video1.mp4",
+    "description": "Introduction to Angular framework."
+  },
+  {
+    "title": "Web Development Overview",
+    "url": "assets/naan_mudhalvan/Training/Training Video2.mp4",
+    "description": "Overview of full-stack web development."
+  },
+  {
+    "title": "Data Science Fundamentals",
+    "url": "assets/naan_mudhalvan/Training/Training Video3.mp4",
+    "description": "Basics of data science and analytics."
+  },
+  {
+    "title": "Machine Learning Introduction",
+    "url": "assets/naan_mudhalvan/Training/Training Video4.mp4",
+    "description": "Getting started with machine learning concepts."
+  },
+  {
+    "title": "Cloud Computing Essentials",
+    "url": "assets/naan_mudhalvan/Training/Training Video5.mp4",
+    "description": "Fundamentals of cloud computing services."
+  },
+  {
+    "title": "Cybersecurity Basics",
+    "url": "assets/naan_mudhalvan/Training/Training Video6.mp4",
+    "description": "Introduction to cybersecurity principles."
+  },
+  {
+    "title": "DevOps Overview",
+    "url": "assets/naan_mudhalvan/Training/Training Video7.mp4",
+    "description": "Understanding DevOps culture and practices."
+  },
+  {
+    "title": "UI/UX Design Fundamentals",
+    "url": "assets/naan_mudhalvan/Training/Training Video8.mp4",
+    "description": "Basics of user interface and user experience design."
+  },
+  {
+    "title": "Mobile App Development",
+    "url": "assets/naan_mudhalvan/Training/Training Video9.mp4",
+    "description": "Introduction to mobile application development."
+  },
+  {
+    "title": "Database Management Systems",
+    "url": "assets/naan_mudhalvan/Training/Training Video10.mp4",
+    "description": "Fundamentals of database management."
+  },
+  {
+    "title": "Artificial Intelligence Overview",
+    "url": "assets/naan_mudhalvan/Training/Training Video11.mp4",
+    "description": "Basics of artificial intelligence concepts."
+  },
+  {
+    "title": "Big Data Fundamentals",
+    "url": "assets/naan_mudhalvan/Training/Training Video12.mp4",
+    "description": "Introduction to big data technologies."
+  },
+  {
+    "title": "Blockchain Basics",
+    "url": "assets/naan_mudhalvan/Training/Training Video13.mp4",
+    "description": "Understanding blockchain technology."
+  },
+  {
+    "title": "Internet of Things (IoT) Overview",
+    "url": "assets/naan_mudhalvan/Training/Training Video14.mp4",
+    "description": "Fundamentals of IoT systems."
+  },
+  {
+    "title": "Software Testing Essentials",
+    "url": "assets/naan_mudhalvan/Training/Training Video15.mp4",
+    "description": "Basics of software testing methodologies."
+  },
+  {
+    "title": "ADDITIVE MANUFACTURING",
+    "url": "assets/naan_mudhalvan/Training/TANSAM - ADDITIVE MANUF - Video 3.mp4",
+    "description": "Understanding Agile project management."
+  },
+  {
+    "title": "PLC PROGRAMMING & APPLICATIONS",
+    "url": "assets/naan_mudhalvan/Training/TANSAM - ADDITIVE MANUF - Video 6.mp4",
+    "description": "Introduction to PLC programming and its applications."
+  },
+  {
+    "title": "EMBEDDED SYSTEMS FOR IOT – RASPBERRY PI",
+    "url": "assets/naan_mudhalvan/Training/TANSAM - ADDITIVE MANUF - Video 9.mp4",
+    "description": "Fundamentals of embedded systems using Raspberry Pi."
+  },
+  {
+    "title": "INDUSTRIAL IOT & INDUSTRY 4.0",
+    "url": "assets/naan_mudhalvan/Training/TANSAM - ADDITIVE MANUF - Video 11.mp4",
+    "description": "Overview of Industrial IoT and Industry 4.0 concepts."
+  }
+]
