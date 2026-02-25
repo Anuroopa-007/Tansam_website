@@ -56,12 +56,7 @@ export const routes: Routes = [
   { path: 'TANSAM_Project', component: ProjectComponent },
   { path: 'industries', component: IndustryComponent },
   { path: 'feedback', component: FeedbackComponent },
-
-  {
-    path: 'latestnews',
-    component: LatestnewsComponent,
-    data: { breadcrumb: 'Latest News' },
-  },
+  { path: 'latestnews', component: LatestnewsComponent },
   { path: 'courseregister', component: CourseregisterComponent },
   { path: 'courseregister/:title', component: CourseregisterComponent },
   { path: 'internship_Reg', component: InternshipComponent },
