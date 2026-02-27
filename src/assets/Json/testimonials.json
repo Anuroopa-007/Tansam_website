@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Arun Kumar",
+    "course": "Web Development",
+    "message": "This course transformed my career!",
+    "image": "assets/images/arun.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back1.mp4"
+  },
+  {
+    "name": "Priya R.",
+    "course": "Data Science",
+    "message": "The practical training was excellent.",
+    "image": "",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back2.mp4"
+  },
+  {
+    "name": "Vikram S.",
+    "course": "Machine Learning",
+    "message": "Highly recommend to anyone looking to upskill.",
+    "image": "assets/images/vikram.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back3.mp4"
+  },
+  {
+    "name": "Sneha M.",
+    "course": "Cloud Computing",
+    "message": "The instructors were knowledgeable and supportive.",
+    "image": "assets/images/sneha.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back4.mp4"
+  },
+  {
+    "name": "Rohit K.",
+    "course": "Cybersecurity",
+    "message": "A comprehensive course that covered all key areas.",
+    "image": "",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back5.mp4"
+  },
+  {
+    "name": "Anita D.",
+    "course": "DevOps",
+    "message": "The hands-on labs were particularly beneficial.",
+    "image": "assets/images/anita.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back6.mp4"
+  },
+  {
+    "name": "Karan J.",
+    "course": "UI/UX Design",
+    "message": "Learned so much about user-centered design.",
+    "image": "assets/images/karan.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back7.mp4"
+  },
+  {
+    "name": "Meera S.",
+    "course": "Mobile App Development",
+    "message": "The course content was up-to-date and relevant.",
+    "image": "",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back8.mp4"
+  },
+  {
+    "name": "Ajay P.",
+    "course": "Database Management",
+    "message": "Great balance of theory and practical application.",
+    "image": "assets/images/ajay.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back9.mp4"
+  },
+  {
+    "name": "Lakshmi V.",
+    "course": "Artificial Intelligence",
+    "message": "The projects helped solidify my understanding.",
+    "image": "assets/images/lakshmi.jpg",
+    "video": "assets/naan_mudhalvan/Feedback/Feed Back11.mp4"
+  }
+]
