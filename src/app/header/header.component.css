@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 /* ================================
    Sticky Header
 ================================= */
@@ -318,7 +319,6 @@
    Responsive - Mobile (KEY CHANGES)
 ================================= */
 @media (max-width: 768px) {
-
   /* --- TOPLINE: hide scrolling notification on mobile to save space --- */
   .scrollingnotif {
     display: none;
@@ -326,30 +326,30 @@
 
   /* --- LOGO SECTION: single compact row like reference screenshot --- */
   .logosection {
-    flex-direction: row;          /* keep in ONE row */
+    flex-direction: row; /* keep in ONE row */
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;           /* tight padding */
+    padding: 10px 15px; /* tight padding */
     gap: 8px;
   }
 
   /* Left logos: TANSAM + Siemens stacked */
   .logo-left {
     display: flex;
-    flex-direction: column;       /* stack TANSAM logo above Siemens text */
+    flex-direction: column; /* stack TANSAM logo above Siemens text */
     align-items: flex-start;
     gap: 4px;
     flex-shrink: 0;
   }
 
   .logo-left img {
-    height: 55px;                 /* smaller for mobile */
+    height: 55px; /* smaller for mobile */
     object-fit: contain;
   }
 
   .logo-left img[alt="Siemens Logo"] {
-    height: 14px;                 /* keep Siemens text small */
+    height: 14px; /* keep Siemens text small */
   }
 
   /* Center title: compact */
@@ -360,7 +360,7 @@
   }
 
   .header-title .main-title {
-    font-size: 13px;              /* small enough to fit in one row */
+    font-size: 13px; /* small enough to fit in one row */
     white-space: normal;
     line-height: 1.3;
     font-weight: bold;
@@ -377,14 +377,14 @@
   /* Right logos: TIDCO + TN side by side */
   .logo-right {
     display: flex;
-    flex-direction: row;          /* side by side */
+    flex-direction: row; /* side by side */
     align-items: center;
     gap: 6px;
     flex-shrink: 0;
   }
 
   .logo-right img {
-    height: 45px;                 /* smaller for mobile */
+    height: 45px; /* smaller for mobile */
     object-fit: contain;
   }
 
@@ -395,11 +395,25 @@
   }
 
   .hamburger {
-    display: block;               /* show hamburger */
+    display: block; /* show hamburger */
     font-size: 24px;
     cursor: pointer;
     color: #fff;
     /* no absolute positioning needed, it flows naturally */
+  }
+
+  .hamburger i {
+    font-size: 24px;
+  }
+
+  .hamburger.close-icon i.fa-xmark {
+    color: red;
+    animation: spin 0.3s ease-in-out;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(180deg); }
   }
 
   /* Slide-in side drawer */
@@ -449,7 +463,6 @@
     top: 15px;
     left: 15px;
     z-index: 3100;
-    color: #9a0000 !important;
     font-size: 26px;
   }
 
@@ -476,7 +489,7 @@
   }
 
   .labs-grid {
-    grid-template-columns: 1fr;   /* single column on mobile */
+    grid-template-columns: 1fr; /* single column on mobile */
   }
 
   .dropdown-menu li,
@@ -491,5 +504,17 @@
     font-size: 14px;
     color: #00569a;
     padding: 4px 0;
+  }
+
+  /* Backdrop for blur */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 2999;
   }
 }

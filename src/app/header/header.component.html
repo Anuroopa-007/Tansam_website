@@ -17,7 +17,6 @@
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-
         <!-- Scrolling Notification (hidden on mobile) -->
         <div class="scrollingnotif">
           <div class="notification-frame">
@@ -30,7 +29,6 @@
             </div>
           </div>
         </div>
-
         <div class="topright-container">
           <div class="topright"><a [routerLink]="['contact_us']">Contact</a></div>
           <!-- <div class="topright"><a [routerLink]="['GCC']">GCC</a></div> -->
@@ -40,7 +38,6 @@
       </div>
     </div>
   </div>
-
   <!-- Logo Section: Desktop = full layout, Mobile = compact single row -->
   <section class="header-container logosection">
     <!-- Left Logos -->
@@ -50,13 +47,11 @@
       </a>
       <img src="assets/headerimage/siemens.png" alt="Siemens Logo" />
     </div>
-
     <!-- Center Title -->
     <div class="header-title">
       <h1 class="main-title">Tamil Nadu Smart and Advanced Manufacturing</h1>
       <div class="subtitle">Center of Excellence</div>
     </div>
-
     <!-- Right Logos -->
     <div class="logo-right">
       <a href="https://tidco.com/" target="_blank">
@@ -67,22 +62,19 @@
       </a>
     </div>
   </section>
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="hamburger" (click)="toggleMenu()" [ngClass]="{ 'close-icon': isMenuOpen }">
-      {{ isMenuOpen ? "✖" : "☰" }}
+      <i *ngIf="!isMenuOpen" class="fa-solid fa-bars"></i>
+      <i *ngIf="isMenuOpen" class="fa-solid fa-xmark"></i>
     </div>
-
     <ul class="nav-list" [ngClass]="{ active: isMenuOpen }">
       <li routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
         <a [routerLink]="['/']" (click)="closeMenu()">Home</a>
       </li>
-
       <li routerLinkActive="active-link">
         <a [routerLink]="['/aboutus']" (click)="closeMenu()">About Us</a>
       </li>
-
       <li class="dropdown" [ngClass]="{ active: isDropdownOpen['labs'] }" (click)="toggleDropdown('labs')">
         <span class="menu-label">
           Our Research Labs
@@ -101,7 +93,6 @@
           <li><a [routerLink]="['/lab/Predictive_Engineering']">Predictive Engineering</a></li>
         </ul>
       </li>
-
       <li class="dropdown" [ngClass]="{ active: isDropdownOpen['naanmudhalvan'] }" (click)="toggleDropdown('naanmudhalvan')">
         <span>
           Skilling
@@ -117,7 +108,6 @@
           <li class="no-arrow"><a [routerLink]="['courseware']">Courseware</a></li>
         </ul>
       </li>
-
       <li class="dropdown" [ngClass]="{ active: isDropdownOpen['digital'] }" (click)="toggleDropdown('digital')">
         <span>
           Digital Transformation
@@ -131,10 +121,10 @@
           <li class="no-arrow"><a [routerLink]="['/ai']" (click)="closeMenu()">Artificial Intelligence</a></li>
         </ul>
       </li>
-
       <li routerLinkActive="active-link">
         <a [routerLink]="['/latestnews']" (click)="closeMenu()">Latest News</a>
       </li>
     </ul>
   </nav>
+  <div class="backdrop" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
 </div>
