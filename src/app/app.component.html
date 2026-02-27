@@ -14,13 +14,47 @@
 
 <!-- Main Content (Blurred when popup is active) -->
 <div class="content" [class.blurred]="showPopup">
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 
-    <!-- Back to Top Button -->
-    <button class="button" (click)="scrollToTop()" [class.show]="showBackToTop">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+  <!-- Back to Top Button with Circular Progress -->
+  <button class="back-to-top" (click)="scrollToTop()" [class.show]="showBackToTop">
+    <svg class="progress-ring" width="60" height="60">
+      <circle class="progress-ring__circle" 
+              stroke="currentColor" 
+              stroke-width="4" 
+              fill="transparent" 
+              r="28" 
+              cx="30" 
+              cy="30"/>
+      <circle class="progress-ring__progress" 
+              stroke="#009999" 
+              stroke-width="4" 
+              fill="transparent" 
+              r="28" 
+              cx="30" 
+              cy="30"
+              [style.strokeDashoffset]="dashOffset"/>
+    </svg>
+    
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Chatbot Floating Button -->
+  <button class="chatbot-btn" 
+          (click)="toggleChatbotMessage()" 
+          [class.show]="showBackToTop">
+    <i class="fa-solid fa-comment-dots"></i>
+  </button>
+
+  <!-- Chatbot Coming Soon Message -->
+  <div class="chatbot-message" *ngIf="showChatMessage" (click)="toggleChatbotMessage()">
+    <div class="chatbot-tooltip">
+      <p>Chatbot</p>
+      <p class="soon">Coming Soon!</p>
+      <div class="tooltip-arrow"></div>
+    </div>
+  </div>
 </div>
 

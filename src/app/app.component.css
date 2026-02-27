@@ -206,3 +206,191 @@
     font-size: 14px;
   }
 }
+/* Back to Top Button with Circular Progress */
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.3s ease, visibility 0.4s;
+  z-index: 1000;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+  background: #f8f9fa;
+}
+
+.back-to-top i {
+  color: #009999;
+  font-size: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Circular Progress Ring */
+.progress-ring {
+  position: absolute;
+  transform: rotate(-90deg); /* Start from top */
+}
+
+.progress-ring__circle {
+  stroke: #e0e0e0;           /* background circle (grey) */
+}
+
+.progress-ring__progress {
+  stroke-dasharray: 175.93;   /* circumference = 2 * π * r = 2*3.14*28 ≈ 175.93 */
+  stroke-dashoffset: 175.93;  /* starts empty */
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 20px;
+    bottom: 40px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .progress-ring {
+    width: 55px;
+    height: 55px;
+  }
+
+  .progress-ring__circle,
+  .progress-ring__progress {
+    r: 25;
+    cx: 27.5;
+    cy: 27.5;
+  }
+
+  .progress-ring__progress {
+    stroke-dasharray: 157.08; /* 2 * π * 25 */
+  }
+
+  .back-to-top i {
+    font-size: 20px;
+  }
+}
+
+/* Chatbot Floating Button */
+.chatbot-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 120px;           /* Positioned above back-to-top button */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #009999;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 153, 153, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.chatbot-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  background: #007f7f;
+}
+
+.chatbot-btn i {
+  font-size: 28px;
+}
+
+/* Chatbot Message Tooltip */
+.chatbot-message {
+  position: fixed;
+  right: 30px;
+  bottom: 190px;           /* Above the button */
+  z-index: 998;
+  cursor: pointer;
+}
+
+.chatbot-tooltip {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  min-width: 140px;
+  position: relative;
+}
+
+.chatbot-tooltip p {
+  margin: 4px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.chatbot-tooltip .soon {
+  color: #009999;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Arrow pointing down to the button */
+.tooltip-arrow {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .chatbot-btn {
+    right: 20px;
+    bottom: 110px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .chatbot-btn i {
+    font-size: 24px;
+  }
+
+  .chatbot-message {
+    right: 20px;
+    bottom: 175px;
+  }
+
+  .chatbot-tooltip {
+    min-width: 130px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+}
