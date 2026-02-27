@@ -27,6 +27,7 @@ export class AppComponent {
 
   // Circular progress
   scrollPercentage = 0;
+  showChatMessage = false;
 
 
   constructor(private cdr: ChangeDetectorRef, private router: Router) {}
@@ -82,5 +83,9 @@ export class AppComponent {
     if (this.currentImageIndex < this.popupImages.length - 1) {
       this.currentImageIndex++;
     }
+  }
+  // Chatbot toggle
+  toggleChatbotMessage() {
+    this.showChatMessage = !this.showChatMessage;
   }
 }
