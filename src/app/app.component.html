@@ -19,8 +19,27 @@
     <app-footer></app-footer>
 
     <!-- Back to Top Button -->
-    <button class="button" (click)="scrollToTop()" [class.show]="showBackToTop">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <!-- Back to Top Button with Circular Progress -->
+<button class="back-to-top" (click)="scrollToTop()" [class.show]="showBackToTop">
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring__circle" 
+            stroke="currentColor" 
+            stroke-width="4" 
+            fill="transparent" 
+            r="28" 
+            cx="30" 
+            cy="30"/>
+    <circle class="progress-ring__progress" 
+            stroke="#009999" 
+            stroke-width="4" 
+            fill="transparent" 
+            r="28" 
+            cx="30" 
+            cy="30"
+            [style.strokeDashoffset]="dashOffset"/>
+  </svg>
+  
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 </div>
 

@@ -18,18 +18,22 @@ export class AppComponent {
   showPopup = false;
   currentImageIndex = 0;
 
-  // Array of images for the popup
+  // Popup images
   popupImages = [
     'assets/bannerimage/page1.jpg',
     'assets/bannerimage/page2.jpg',
   ];
+  dashOffset = 175.93;
+
+  // Circular progress
+  scrollPercentage = 0;
+
 
   constructor(private cdr: ChangeDetectorRef, private router: Router) {}
 
   ngOnInit() {
     AOS.init();
 
-    // Show popup only if it hasn't been shown in this session
     if (!sessionStorage.getItem('popupShown')) {
       this.showPopup = true;
     }
@@ -43,7 +47,19 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.showBackToTop = window.scrollY > 300;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    
+    // Show button when scrolled > 300px
+    this.showBackToTop = scrollTop > 300;
+
+    // Calculate scroll percentage (0 to 100)
+    this.scrollPercentage = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    // Update dash offset (175.93 = full circle, 0 = full progress)
+    const circumference = 175.93;
+    this.dashOffset = circumference - (circumference * this.scrollPercentage) / 100;
+
     this.cdr.detectChanges();
   }
 
@@ -56,14 +72,12 @@ export class AppComponent {
     sessionStorage.setItem('popupShown', 'true');
   }
 
-  // Navigate to previous image
   prevImage() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
     }
   }
 
-  // Navigate to next image
   nextImage() {
     if (this.currentImageIndex < this.popupImages.length - 1) {
       this.currentImageIndex++;
